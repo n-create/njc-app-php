@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <?php $data = $searchManager->getBkDetailTemplateData($rentSaleStr, $searchManager::BK_TEMPLATE_SIMPLE, $detailData[$searchManager::BK_DATA_BILDTYPE]['key']); ?>
 <div class="col-md-6">
@@ -46,14 +47,14 @@
     </tbody>
   </table>
 </div><?php
-  $imgPath = PATH_NOPHOTO_IMG;
+  $imgData = null;
   if(!empty($detailData[$searchManager::BK_DATA_IMAGES])) {
-      $imgPath = $searchManager->getMainImagePath($detailData[$searchManager::BK_DATA_IMAGES], $rentSaleStr);
+      $imgData = $searchManager->getMainImagePath($detailData[$searchManager::BK_DATA_IMAGES], $rentSaleStr);
   }
 ?>
-<?php if(!empty($imgPath)) { ?>
+<?php if(!empty($imgData)) { ?>
 <div class="col-md-6">
   <div class="bk-detail-sub-image-wrapper p-2">
-    <div class="bk-detail-sub-image-inner"><img src="{{ $imgPath }}"/></div>
+    <div class="bk-detail-sub-image-inner"><img src="{{ $imgData['path'] }}" alt="{{ $imgData['comment'] }}"/></div>
   </div>
 </div><?php } ?>

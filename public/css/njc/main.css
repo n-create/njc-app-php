@@ -435,39 +435,38 @@ img {
 /* line 311, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .card-img-top .listGazo .GazoImg {
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  left: 50%;
+  top: 50%;
   width: 100%;
-  display: flex;
+  height: 100%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
 }
 
-/* line 321, resources/assets/sass/njc/_common.scss */
+/* line 320, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .card-img-top .listGazo .GazoImg img {
   max-height: 100%;
   max-width: 100%;
 }
 
-/* line 330, resources/assets/sass/njc/_common.scss */
+/* line 329, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents > div:not(:last-child) {
   margin-bottom: .3rem;
 }
 
-/* line 333, resources/assets/sass/njc/_common.scss */
+/* line 332, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .bk-title {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* line 338, resources/assets/sass/njc/_common.scss */
+/* line 337, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl {
   min-width: 49%;
 }
 
-/* line 344, resources/assets/sass/njc/_common.scss */
+/* line 343, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl,
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-sub-item dl {
   margin-bottom: 0;
@@ -475,20 +474,20 @@ img {
   margin-bottom: .1rem;
 }
 
-/* line 348, resources/assets/sass/njc/_common.scss */
+/* line 347, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl dt,
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-sub-item dl dt {
   font-size: 0.8rem;
 }
 
-/* line 351, resources/assets/sass/njc/_common.scss */
+/* line 350, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl dd,
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-sub-item dl dd {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
 
-/* line 354, resources/assets/sass/njc/_common.scss */
+/* line 353, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl dd .num, .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-main-item dl dd .small-num,
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-sub-item dl dd .num,
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .disp-sub-item dl dd .small-num {
@@ -497,34 +496,34 @@ img {
   color: #ff0004;
 }
 
-/* line 363, resources/assets/sass/njc/_common.scss */
+/* line 362, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents .ad-kotu p {
   margin-bottom: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-/* line 369, resources/assets/sass/njc/_common.scss */
+/* line 368, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox .bk-result-page-wrapper .bk-list-body .list-item .list-item-inner .bk-body .disp-contents a {
   color: #333333;
 }
 
-/* line 381, resources/assets/sass/njc/_common.scss */
+/* line 380, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.sale .bk-body .disp-sub-item dl {
   min-width: 49%;
 }
 
-/* line 390, resources/assets/sass/njc/_common.scss */
+/* line 389, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item {
   margin: 0 -1.25rem -1.25rem;
 }
 
-/* line 392, resources/assets/sass/njc/_common.scss */
+/* line 391, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table {
   margin-bottom: 0;
 }
 
-/* line 394, resources/assets/sass/njc/_common.scss */
+/* line 393, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table td.sub_content {
   background-color: #fafafa;
   background-image: url(../../images/icon-link.svg);
@@ -533,40 +532,40 @@ img {
   background-size: 12px;
 }
 
-/* line 400, resources/assets/sass/njc/_common.scss */
+/* line 399, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table td.sub_content .link_content {
   padding-right: .5rem;
 }
 
-/* line 402, resources/assets/sass/njc/_common.scss */
+/* line 401, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table td.sub_content .link_content dl {
   margin-right: .8rem;
 }
 
-/* line 405, resources/assets/sass/njc/_common.scss */
+/* line 404, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table td.sub_content .link_content dl dt:not(:last-child) {
   margin-right: 0;
 }
 
-/* line 413, resources/assets/sass/njc/_common.scss */
+/* line 412, resources/assets/sass/njc/_common.scss */
 .public-body .resultBox.rent .bk-body .disp-sub-item .table td.sub_link .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 425, resources/assets/sass/njc/_common.scss */
+/* line 424, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner {
   box-shadow: 0px 1px 3px 0px #e4e4e4;
 }
 
-/* line 428, resources/assets/sass/njc/_common.scss */
+/* line 427, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .card-img-top .listGazo {
   position: relative;
   width: 100%;
   padding-top: 75%;
 }
 
-/* line 432, resources/assets/sass/njc/_common.scss */
+/* line 431, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .card-img-top .listGazo .GazoImg {
   position: absolute;
   left: 0;
@@ -579,24 +578,24 @@ img {
   align-items: center;
 }
 
-/* line 442, resources/assets/sass/njc/_common.scss */
+/* line 441, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .card-img-top .listGazo .GazoImg img {
   max-height: 100%;
   max-width: 100%;
 }
 
-/* line 449, resources/assets/sass/njc/_common.scss */
+/* line 448, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .bk-title {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* line 454, resources/assets/sass/njc/_common.scss */
+/* line 453, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl {
   min-width: 49%;
 }
 
-/* line 460, resources/assets/sass/njc/_common.scss */
+/* line 459, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl,
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-sub-item dl {
   margin-bottom: 0;
@@ -604,20 +603,20 @@ img {
   margin-bottom: .1rem;
 }
 
-/* line 464, resources/assets/sass/njc/_common.scss */
+/* line 463, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl dt,
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-sub-item dl dt {
   font-size: 0.8rem;
 }
 
-/* line 467, resources/assets/sass/njc/_common.scss */
+/* line 466, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl dd,
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-sub-item dl dd {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
 
-/* line 470, resources/assets/sass/njc/_common.scss */
+/* line 469, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl dd .num, .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-main-item dl dd .small-num,
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-sub-item dl dd .num,
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .disp-sub-item dl dd .small-num {
@@ -626,19 +625,19 @@ img {
   color: #ff0004;
 }
 
-/* line 479, resources/assets/sass/njc/_common.scss */
+/* line 478, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner .ad-kotu p {
   margin-bottom: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-/* line 485, resources/assets/sass/njc/_common.scss */
+/* line 484, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list .bk-data-list .list-item-inner a {
   color: #333333;
 }
 
-/* line 492, resources/assets/sass/njc/_common.scss */
+/* line 491, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .ui-dialog-titlebar-close {
   width: 30px;
   height: 30px;
@@ -647,13 +646,13 @@ img {
   background-repeat: no-repeat;
 }
 
-/* line 500, resources/assets/sass/njc/_common.scss */
+/* line 499, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
   float: unset;
   text-align: center;
 }
 
-/* line 503, resources/assets/sass/njc/_common.scss */
+/* line 502, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
   color: #fff;
   background-color: #343a40;
@@ -674,164 +673,164 @@ img {
   border-radius: .25rem;
 }
 
-/* line 525, resources/assets/sass/njc/_common.scss */
+/* line 524, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .bundle-parent {
   text-align: center;
 }
 
-/* line 527, resources/assets/sass/njc/_common.scss */
+/* line 526, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .bundle-parent img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 533, resources/assets/sass/njc/_common.scss */
+/* line 532, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-contents .bk-title {
   display: inline-block;
   font-size: 1.2rem;
 }
 
-/* line 537, resources/assets/sass/njc/_common.scss */
+/* line 536, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-contents .disp-main-item {
   font-size: .9rem;
   margin-top: .5rem;
 }
 
-/* line 540, resources/assets/sass/njc/_common.scss */
+/* line 539, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-contents .disp-main-item dl {
   display: inline-block;
   margin-right: .7rem;
   margin-bottom: 0;
 }
 
-/* line 547, resources/assets/sass/njc/_common.scss */
+/* line 546, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-contents .ad-kotu p {
   font-size: .9rem;
   margin-bottom: 0;
 }
 
-/* line 556, resources/assets/sass/njc/_common.scss */
+/* line 555, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-sub-item .table td.sub_content {
   font-size: .9rem;
 }
 
-/* line 558, resources/assets/sass/njc/_common.scss */
+/* line 557, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-sub-item .table td.sub_content dl {
   display: inline-block;
   margin-right: .7rem;
   margin-bottom: 0;
 }
 
-/* line 562, resources/assets/sass/njc/_common.scss */
+/* line 561, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-sub-item .table td.sub_content dl dd {
   margin-bottom: 0;
 }
 
-/* line 567, resources/assets/sass/njc/_common.scss */
+/* line 566, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-sub-item .table td.sub_link {
   vertical-align: middle;
 }
 
-/* line 569, resources/assets/sass/njc/_common.scss */
+/* line 568, resources/assets/sass/njc/_common.scss */
 .public-body .ui-dialog .bundle-child-dialog .disp-sub-item .table td.sub_link .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 585, resources/assets/sass/njc/_common.scss */
+/* line 584, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .bk-detail-top-title-area .bk-detail-title {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 591, resources/assets/sass/njc/_common.scss */
+/* line 590, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-various,
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-sns {
   display: inline-block;
 }
 
-/* line 594, resources/assets/sass/njc/_common.scss */
+/* line 593, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-various div,
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-sns div {
   display: inline-block;
 }
 
-/* line 596, resources/assets/sass/njc/_common.scss */
+/* line 595, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-various div .btn,
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-sns div .btn {
   font-weight: bold;
   font-size: .8rem;
 }
 
-/* line 602, resources/assets/sass/njc/_common.scss */
+/* line 601, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-various img:not(:last-child),
 .public-body .bk-detail-header .bk-detail-top-data .detail-btn-set-area .detail-btn-set-area-sns img:not(:last-child) {
   margin-right: .3rem;
 }
 
-/* line 608, resources/assets/sass/njc/_common.scss */
+/* line 607, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns {
   color: #ffffff;
   font-weight: bold;
 }
 
-/* line 611, resources/assets/sass/njc/_common.scss */
+/* line 610, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns svg {
   fill: #ffffff;
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 616, resources/assets/sass/njc/_common.scss */
+/* line 615, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns:after {
   display: inline-block;
   vertical-align: middle;
   font-size: .8rem;
 }
 
-/* line 621, resources/assets/sass/njc/_common.scss */
+/* line 620, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.fbimage {
   background-color: #3b5998;
 }
 
-/* line 623, resources/assets/sass/njc/_common.scss */
+/* line 622, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.fbimage:after {
   content: "いいね！";
 }
 
-/* line 627, resources/assets/sass/njc/_common.scss */
+/* line 626, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.twimage {
   background-color: #55acee;
 }
 
-/* line 629, resources/assets/sass/njc/_common.scss */
+/* line 628, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.twimage:after {
   content: "Tweet";
 }
 
-/* line 633, resources/assets/sass/njc/_common.scss */
+/* line 632, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.glimage {
   background-color: #dc4e41;
 }
 
-/* line 636, resources/assets/sass/njc/_common.scss */
+/* line 635, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-header .bk-detail-top-data .btn-sns.lineimage {
   background-color: #00B900;
 }
 
-/* line 644, resources/assets/sass/njc/_common.scss */
+/* line 643, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide {
   background-color: #EEE;
   border: 1px solid #DDD;
   border-radius: 4px;
 }
 
-/* line 649, resources/assets/sass/njc/_common.scss */
+/* line 648, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container {
   position: relative;
 }
 
-/* line 651, resources/assets/sass/njc/_common.scss */
+/* line 650, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls {
   z-index: 1;
   position: absolute;
@@ -841,12 +840,12 @@ img {
   transform: translate(0, -50%);
 }
 
-/* line 658, resources/assets/sass/njc/_common.scss */
+/* line 657, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls {
   clear: both;
 }
 
-/* line 660, resources/assets/sass/njc/_common.scss */
+/* line 659, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls a {
   display: inline-block;
   width: 40px;
@@ -855,45 +854,45 @@ img {
   border-radius: 50%;
 }
 
-/* line 666, resources/assets/sass/njc/_common.scss */
+/* line 665, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls a.prev {
   float: left;
   margin-left: -10px;
   background-image: url(/images/icon-prev.svg);
 }
 
-/* line 671, resources/assets/sass/njc/_common.scss */
+/* line 670, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls a.next {
   float: right;
   margin-right: -10px;
   background-image: url(/images/icon-next.svg);
 }
 
-/* line 676, resources/assets/sass/njc/_common.scss */
+/* line 675, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls a.prev, .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #controls .nav-controls a.next {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: .8rem;
 }
 
-/* line 687, resources/assets/sass/njc/_common.scss */
+/* line 686, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #caption {
   background-color: #ffffff;
 }
 
-/* line 689, resources/assets/sass/njc/_common.scss */
+/* line 688, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #caption .image-caption {
   display: block;
 }
 
-/* line 693, resources/assets/sass/njc/_common.scss */
+/* line 692, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #caption .image-caption .slideshow .image-contents .advance-link {
   width: 100%;
   padding-top: 75%;
   position: relative;
 }
 
-/* line 697, resources/assets/sass/njc/_common.scss */
+/* line 696, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #gallery .slideshow-container #caption .image-caption .slideshow .image-contents .advance-link img {
   position: absolute;
   left: 0;
@@ -905,19 +904,19 @@ img {
   margin: auto;
 }
 
-/* line 715, resources/assets/sass/njc/_common.scss */
+/* line 714, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #thumbs ul {
   margin-right: -5px;
   margin-left: -5px;
 }
 
-/* line 718, resources/assets/sass/njc/_common.scss */
+/* line 717, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #thumbs ul li {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-/* line 722, resources/assets/sass/njc/_common.scss */
+/* line 721, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #thumbs ul li.selected a:before {
   content: "";
   position: absolute;
@@ -930,7 +929,7 @@ img {
   border-style: solid;
 }
 
-/* line 736, resources/assets/sass/njc/_common.scss */
+/* line 735, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #thumbs ul li a {
   width: 100%;
   padding-top: 100%;
@@ -939,7 +938,7 @@ img {
   background-color: #ffffff;
 }
 
-/* line 742, resources/assets/sass/njc/_common.scss */
+/* line 741, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide #thumbs ul li a > img {
   position: absolute;
   left: 0;
@@ -951,13 +950,13 @@ img {
   margin: auto;
 }
 
-/* line 756, resources/assets/sass/njc/_common.scss */
+/* line 755, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide .bottom {
   margin-top: .5rem;
   display: block;
 }
 
-/* line 759, resources/assets/sass/njc/_common.scss */
+/* line 758, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide .bottom a {
   display: inline-block;
   font-weight: 400;
@@ -978,40 +977,40 @@ img {
   border-color: #343a40;
 }
 
-/* line 777, resources/assets/sass/njc/_common.scss */
+/* line 776, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide .bottom a:hover {
   text-decoration: none;
 }
 
-/* line 780, resources/assets/sass/njc/_common.scss */
+/* line 779, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide .bottom a.prev-link {
   float: left;
 }
 
-/* line 783, resources/assets/sass/njc/_common.scss */
+/* line 782, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-images .galleriffic-slide .bottom a.next-link {
   float: right;
 }
 
-/* line 793, resources/assets/sass/njc/_common.scss */
+/* line 792, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-comments .prcnt .prcnt_title:before {
   content: "POINT!";
   font-weight: bold;
 }
 
-/* line 805, resources/assets/sass/njc/_common.scss */
+/* line 804, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-simple table tbody tr td > div {
   display: inline-block;
 }
 
-/* line 812, resources/assets/sass/njc/_common.scss */
+/* line 811, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-simple .bk-detail-sub-image-wrapper {
   background-color: #EEE;
   border: 1px solid #DDD;
   border-radius: 4px;
 }
 
-/* line 816, resources/assets/sass/njc/_common.scss */
+/* line 815, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-simple .bk-detail-sub-image-wrapper .bk-detail-sub-image-inner {
   width: 100%;
   padding-top: 75%;
@@ -1019,7 +1018,7 @@ img {
   background-color: #ffffff;
 }
 
-/* line 821, resources/assets/sass/njc/_common.scss */
+/* line 820, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-simple .bk-detail-sub-image-wrapper .bk-detail-sub-image-inner img {
   position: absolute;
   left: 0;
@@ -1031,38 +1030,38 @@ img {
   margin: auto;
 }
 
-/* line 838, resources/assets/sass/njc/_common.scss */
+/* line 837, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-contact-info .detail-contact-info .detail-contact-info-inner .info-telmail dl {
   display: inline-block;
   margin-bottom: 0;
 }
 
-/* line 841, resources/assets/sass/njc/_common.scss */
+/* line 840, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-contact-info .detail-contact-info .detail-contact-info-inner .info-telmail dl dt {
   display: inline-block;
 }
 
-/* line 844, resources/assets/sass/njc/_common.scss */
+/* line 843, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-contact-info .detail-contact-info .detail-contact-info-inner .info-telmail dl dd {
   display: inline;
 }
 
-/* line 858, resources/assets/sass/njc/_common.scss */
+/* line 857, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box.initial .bg-trans .btn:before {
   content: "さらに詳細な情報を見る";
 }
 
-/* line 862, resources/assets/sass/njc/_common.scss */
+/* line 861, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box.initial .bg-trans .btn.active:before {
   content: "詳細な情報を隠す";
 }
 
-/* line 869, resources/assets/sass/njc/_common.scss */
+/* line 868, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box.etcetera {
   display: none;
 }
 
-/* line 872, resources/assets/sass/njc/_common.scss */
+/* line 871, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box .setback,
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box .setback_ryo,
 .public-body .bk-detail-body .bk-detail-main .bk-detail-table-wrap .main-detail-box .building_floor,
@@ -1074,59 +1073,59 @@ img {
   display: inline-block;
 }
 
-/* line 888, resources/assets/sass/njc/_common.scss */
+/* line 887, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-map #mapRouteWrap .mapRoute .routeDistance {
   display: inline-block;
 }
 
-/* line 890, resources/assets/sass/njc/_common.scss */
+/* line 889, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-map #mapRouteWrap .mapRoute .routeDistance .mapDistanceExplain,
 .public-body .bk-detail-body .bk-detail-map #mapRouteWrap .mapRoute .routeDistance .mapDistanceContext {
   display: inline-block;
 }
 
-/* line 899, resources/assets/sass/njc/_common.scss */
+/* line 898, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-map .syuuhen-info .syuuhen-item input[type="checkbox"]:checked + .btn-outline-info {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
 
-/* line 911, resources/assets/sass/njc/_common.scss */
+/* line 910, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main > div:not(:last-child) {
   border-bottom: 1px solid #eeeeee;
   margin-bottom: .6rem;
   padding-bottom: .5rem;
 }
 
-/* line 917, resources/assets/sass/njc/_common.scss */
+/* line 916, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main dl {
   margin-bottom: .4rem;
 }
 
-/* line 919, resources/assets/sass/njc/_common.scss */
+/* line 918, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main dl dt, .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main dl dd {
   margin-bottom: 0;
 }
 
-/* line 923, resources/assets/sass/njc/_common.scss */
+/* line 922, resources/assets/sass/njc/_common.scss */
 .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main dl:not(.shop-tel):not(.shop-fax) dt, .public-body .bk-detail-body .bk-detail-company .innerR .shop-info-main dl:not(.shop-tel):not(.shop-fax) dd {
   display: inline-block;
 }
 
-/* line 934, resources/assets/sass/njc/_common.scss */
+/* line 933, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card {
   box-shadow: 0px 1px 3px 0px #e4e4e4;
 }
 
-/* line 936, resources/assets/sass/njc/_common.scss */
+/* line 935, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-img-top {
   position: relative;
   width: 100%;
   padding-top: 75%;
 }
 
-/* line 940, resources/assets/sass/njc/_common.scss */
+/* line 939, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-img-top > div {
   position: absolute;
   left: 0;
@@ -1139,69 +1138,69 @@ img {
   align-items: center;
 }
 
-/* line 950, resources/assets/sass/njc/_common.scss */
+/* line 949, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-img-top > div img {
   max-height: 100%;
 }
 
-/* line 955, resources/assets/sass/njc/_common.scss */
+/* line 954, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body {
   color: #333333;
 }
 
-/* line 957, resources/assets/sass/njc/_common.scss */
+/* line 956, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl {
   margin-bottom: .1rem;
 }
 
-/* line 959, resources/assets/sass/njc/_common.scss */
+/* line 958, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl:not(.bk_name) {
   display: inline-block;
   min-width: 49%;
 }
 
-/* line 964, resources/assets/sass/njc/_common.scss */
+/* line 963, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl.bk_name dd {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* line 969, resources/assets/sass/njc/_common.scss */
+/* line 968, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl dt {
   font-size: 0.8rem;
 }
 
-/* line 972, resources/assets/sass/njc/_common.scss */
+/* line 971, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl dd {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
 
-/* line 975, resources/assets/sass/njc/_common.scss */
+/* line 974, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl dd .num, .public-body .bk-data-list .card .card-body dl dd .small-num {
   font-size: 1.1rem;
   font-weight: bold;
   color: #ff0004;
 }
 
-/* line 981, resources/assets/sass/njc/_common.scss */
+/* line 980, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body dl dt, .public-body .bk-data-list .card .card-body dl dd {
   display: inline-block;
 }
 
-/* line 986, resources/assets/sass/njc/_common.scss */
+/* line 985, resources/assets/sass/njc/_common.scss */
 .public-body .bk-data-list .card .card-body .ad-kotu p {
   margin-bottom: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-/* line 998, resources/assets/sass/njc/_common.scss */
+/* line 997, resources/assets/sass/njc/_common.scss */
 .public-body .site-info-wrapper .site-info .number-property-val {
   color: #ff0004;
 }
 
-/* line 1005, resources/assets/sass/njc/_common.scss */
+/* line 1004, resources/assets/sass/njc/_common.scss */
 .public-body .more-button .btn {
   width: 70%;
   padding: 14px;
@@ -1210,103 +1209,103 @@ img {
   font-size: 1.1rem;
 }
 
-/* line 1014, resources/assets/sass/njc/_common.scss */
+/* line 1013, resources/assets/sass/njc/_common.scss */
 .public-body #copyright-contents-wrap .copy-right {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* line 1020, resources/assets/sass/njc/_common.scss */
+/* line 1019, resources/assets/sass/njc/_common.scss */
 .public-body #copyright-contents-wrap .nav li a {
   font-size: 0.8rem;
   padding: .1rem .3rem;
 }
 
-/* line 1030, resources/assets/sass/njc/_common.scss */
+/* line 1029, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .searchBoxInner .h3 {
   background-color: #03a9f4;
   color: #ffffff;
 }
 
-/* line 1033, resources/assets/sass/njc/_common.scss */
+/* line 1032, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .searchBoxInner .h3 > a {
   color: #ffffff;
   border-color: #ffffff;
 }
 
-/* line 1042, resources/assets/sass/njc/_common.scss */
+/* line 1041, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .searchBoxInner .inner ul li label.checked {
   background-color: #fdb32b;
   color: #ffffff;
   border-color: #fdb32b;
 }
 
-/* line 1051, resources/assets/sass/njc/_common.scss */
+/* line 1050, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .searchBoxInner .inner dl dt:before {
   border-color: #03a9f4;
 }
 
-/* line 1059, resources/assets/sass/njc/_common.scss */
+/* line 1058, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .searchBtnBox .inner180 .bkSearch_submit {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1068, resources/assets/sass/njc/_common.scss */
+/* line 1067, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .mapMainPanel .mapSideSearch .mapAddSearch .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1079, resources/assets/sass/njc/_common.scss */
+/* line 1078, resources/assets/sass/njc/_common.scss */
 .public-body[class^="rent_"] .bk-detail-body .bk-detail-comments .prcnt .prcnt_title:before {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1090, resources/assets/sass/njc/_common.scss */
+/* line 1089, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .searchBoxInner .h3 {
   background-color: #4caf50;
   color: #ffffff;
 }
 
-/* line 1093, resources/assets/sass/njc/_common.scss */
+/* line 1092, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .searchBoxInner .h3 > a {
   color: #ffffff;
   border-color: #ffffff;
 }
 
-/* line 1102, resources/assets/sass/njc/_common.scss */
+/* line 1101, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .searchBoxInner .inner ul li label.checked {
   background-color: #f44336;
   color: #ffffff;
   border-color: #f44336;
 }
 
-/* line 1111, resources/assets/sass/njc/_common.scss */
+/* line 1110, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .searchBoxInner .inner dl dt:before {
   border-color: #4caf50;
 }
 
-/* line 1119, resources/assets/sass/njc/_common.scss */
+/* line 1118, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .searchBtnBox .inner180 .bkSearch_submit {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1128, resources/assets/sass/njc/_common.scss */
+/* line 1127, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .mapMainPanel .mapSideSearch .mapAddSearch .btn {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1139, resources/assets/sass/njc/_common.scss */
+/* line 1138, resources/assets/sass/njc/_common.scss */
 .public-body[class^="sale_"] .bk-detail-body .bk-detail-comments .prcnt .prcnt_title:before {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1148, resources/assets/sass/njc/_common.scss */
+/* line 1147, resources/assets/sass/njc/_common.scss */
 .public-body .image-title {
   width: 80px;
   padding: 1px 0;
@@ -1319,165 +1318,165 @@ img {
   color: #FFF;
 }
 
-/* line 1161, resources/assets/sass/njc/_common.scss */
+/* line 1160, resources/assets/sass/njc/_common.scss */
 .public-body .bk-list-rs1 .more-button .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1169, resources/assets/sass/njc/_common.scss */
+/* line 1168, resources/assets/sass/njc/_common.scss */
 .public-body .bk-list-rs2 .more-button .btn {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1178, resources/assets/sass/njc/_common.scss */
+/* line 1177, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list.rent .more-button .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1186, resources/assets/sass/njc/_common.scss */
+/* line 1185, resources/assets/sass/njc/_common.scss */
 .public-body .bk-tiny-list.sale .more-button .btn {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1200, resources/assets/sass/njc/_common.scss */
+/* line 1199, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quicksearchRent .searchBoxInner .inner ul li label.checked {
   background-color: #fdb32b;
   color: #ffffff;
   border-color: #fdb32b;
 }
 
-/* line 1211, resources/assets/sass/njc/_common.scss */
+/* line 1210, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quicksearchRent + div .btn {
   background-color: #fdb32b;
   color: #ffffff;
 }
 
-/* line 1223, resources/assets/sass/njc/_common.scss */
+/* line 1222, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quicksearchSale .searchBoxInner .inner ul li label.checked {
   background-color: #f44336;
   color: #ffffff;
   border-color: #f44336;
 }
 
-/* line 1234, resources/assets/sass/njc/_common.scss */
+/* line 1233, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quicksearchSale + div .btn {
   background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 1243, resources/assets/sass/njc/_common.scss */
+/* line 1242, resources/assets/sass/njc/_common.scss */
 .public-body .bk-result-page-wrapper .listGazo img {
   max-width: 300px;
   max-height: 240px;
 }
 
-/* line 1252, resources/assets/sass/njc/_common.scss */
+/* line 1251, resources/assets/sass/njc/_common.scss */
 .public-body #njcAreaView .h3 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-/* line 1257, resources/assets/sass/njc/_common.scss */
+/* line 1256, resources/assets/sass/njc/_common.scss */
 .public-body #njcAreaView #mapListDialog .mapDialogKen, .public-body #njcAreaView #mapListDialog .mapChoHead, .public-body #njcAreaView #mapListDialog .h5 {
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 1261, resources/assets/sass/njc/_common.scss */
+/* line 1260, resources/assets/sass/njc/_common.scss */
 .public-body #njcAreaView #mapListDialog span.clickable {
   cursor: pointer;
 }
 
-/* line 1263, resources/assets/sass/njc/_common.scss */
+/* line 1262, resources/assets/sass/njc/_common.scss */
 .public-body #njcAreaView #mapListDialog span.clickable:hover {
   opacity: 0.5;
   text-decoration: underline;
 }
 
-/* line 1272, resources/assets/sass/njc/_common.scss */
+/* line 1271, resources/assets/sass/njc/_common.scss */
 .public-body #bkSearchMapSetCondition .searchBoxInner .form-control {
   font-size: .9rem;
 }
 
-/* line 1275, resources/assets/sass/njc/_common.scss */
+/* line 1274, resources/assets/sass/njc/_common.scss */
 .public-body #bkSearchMapSetCondition .searchBoxInner .h5,
 .public-body #bkSearchMapSetCondition .searchBoxInner .h5 + div {
   max-width: 100%;
   flex: 0 0 100%;
 }
 
-/* line 1281, resources/assets/sass/njc/_common.scss */
+/* line 1280, resources/assets/sass/njc/_common.scss */
 .public-body #bkSearchMapSetCondition .searchBoxInner ul li {
   min-width: 50%;
 }
 
-/* line 1286, resources/assets/sass/njc/_common.scss */
+/* line 1285, resources/assets/sass/njc/_common.scss */
 .public-body #bkSearchMapSetCondition .searchBoxInner .inner select {
   width: 100%;
 }
 
-/* line 1289, resources/assets/sass/njc/_common.scss */
+/* line 1288, resources/assets/sass/njc/_common.scss */
 .public-body #bkSearchMapSetCondition .searchBoxInner .inner .afterSelectText {
   display: none;
 }
 
-/* line 1298, resources/assets/sass/njc/_common.scss */
+/* line 1297, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .mapSideSearch .mapAddSearch input[type="text"] {
   font-size: .8rem;
   width: calc(100% - 78px);
 }
 
-/* line 1306, resources/assets/sass/njc/_common.scss */
+/* line 1305, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView {
   position: absolute;
 }
 
-/* line 1309, resources/assets/sass/njc/_common.scss */
+/* line 1308, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView .mapBkList .buttonBg {
   display: none;
 }
 
-/* line 1314, resources/assets/sass/njc/_common.scss */
+/* line 1313, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView .mapBkList .mapBkItem .mapBkLeft img {
   max-width: 100%;
 }
 
-/* line 1319, resources/assets/sass/njc/_common.scss */
+/* line 1318, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView .mapBkList .mapBkItem .mapBkContent a {
   color: #333333;
 }
 
-/* line 1322, resources/assets/sass/njc/_common.scss */
+/* line 1321, resources/assets/sass/njc/_common.scss */
 .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView .mapBkList .mapBkItem .mapBkContent a .money span {
   font-size: 1.1rem;
   font-weight: bold;
   color: #ff0004;
 }
 
-/* line 1337, resources/assets/sass/njc/_common.scss */
+/* line 1336, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings {
   position: relative;
 }
 
-/* line 1339, resources/assets/sass/njc/_common.scss */
+/* line 1338, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .h4 {
   padding: .7rem;
   border-bottom: none;
   font-size: 1.1rem;
 }
 
-/* line 1344, resources/assets/sass/njc/_common.scss */
+/* line 1343, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .change-all-view-btn {
   position: absolute;
   right: 10px;
   top: 6px;
 }
 
-/* line 1351, resources/assets/sass/njc/_common.scss */
+/* line 1350, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents {
   margin-right: 5px;
   margin-left: 5px;
@@ -1488,21 +1487,21 @@ img {
   height: auto;
 }
 
-/* line 1359, resources/assets/sass/njc/_common.scss */
+/* line 1358, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-image {
   margin-bottom: 10px;
   background-color: #f9f9f9;
   height: auto !important;
 }
 
-/* line 1363, resources/assets/sass/njc/_common.scss */
+/* line 1362, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-image .image-wrap {
   position: relative;
   width: 100%;
   padding-top: 75%;
 }
 
-/* line 1367, resources/assets/sass/njc/_common.scss */
+/* line 1366, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-image .image-wrap img {
   position: absolute;
   left: 0;
@@ -1514,23 +1513,23 @@ img {
   max-height: 100%;
 }
 
-/* line 1379, resources/assets/sass/njc/_common.scss */
+/* line 1378, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-message {
   line-height: 1.5;
   font-size: .9rem;
 }
 
-/* line 1382, resources/assets/sass/njc/_common.scss */
+/* line 1381, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-message .surrounding-name {
   font-weight: bold;
 }
 
-/* line 1384, resources/assets/sass/njc/_common.scss */
+/* line 1383, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .surroundings-contents .surrounding-message .surrounding-name:after {
   content: "まで";
 }
 
-/* line 1390, resources/assets/sass/njc/_common.scss */
+/* line 1389, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .slick-arrow {
   display: block;
   text-align: center;
@@ -1541,27 +1540,27 @@ img {
   background-position: center;
 }
 
-/* line 1398, resources/assets/sass/njc/_common.scss */
+/* line 1397, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .slick-arrow:before {
   content: "";
 }
 
-/* line 1401, resources/assets/sass/njc/_common.scss */
+/* line 1400, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .slick-arrow.slick-next {
   background-image: url(/images/icon-next.svg);
 }
 
-/* line 1404, resources/assets/sass/njc/_common.scss */
+/* line 1403, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .slick-arrow.slick-prev {
   background-image: url(/images/icon-prev.svg);
 }
 
-/* line 1407, resources/assets/sass/njc/_common.scss */
+/* line 1406, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings .surroundings-list-wrap #surroundings_custom .slick-arrow.slick-disabled {
   opacity: 0.5;
 }
 
-/* line 1415, resources/assets/sass/njc/_common.scss */
+/* line 1414, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings-summary-wrap {
   border-width: 2px;
   border-style: solid;
@@ -1569,19 +1568,19 @@ img {
   padding: 10px;
 }
 
-/* line 1423, resources/assets/sass/njc/_common.scss */
+/* line 1422, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings-summary-wrap ul li {
   line-height: 1.5;
   font-size: 14px;
 }
 
-/* line 1426, resources/assets/sass/njc/_common.scss */
+/* line 1425, resources/assets/sass/njc/_common.scss */
 .public-body .surroundings-summary-wrap ul li:before {
   content: "■";
   margin-right: 3px;
 }
 
-/* line 1435, resources/assets/sass/njc/_common.scss */
+/* line 1434, resources/assets/sass/njc/_common.scss */
 .public-body #cboxContent #cboxClose {
   top: auto;
   bottom: 5px;
@@ -1591,7 +1590,7 @@ img {
   background-repeat: no-repeat;
 }
 
-/* line 1443, resources/assets/sass/njc/_common.scss */
+/* line 1442, resources/assets/sass/njc/_common.scss */
 .public-body #cboxContent #cboxPrevious,
 .public-body #cboxContent #cboxNext {
   font-size: 0;
@@ -1606,29 +1605,29 @@ img {
   background-position: center;
 }
 
-/* line 1458, resources/assets/sass/njc/_common.scss */
+/* line 1457, resources/assets/sass/njc/_common.scss */
 .public-body #cboxContent #cboxPrevious {
   background-image: url(/images/icon-prev.svg);
 }
 
-/* line 1461, resources/assets/sass/njc/_common.scss */
+/* line 1460, resources/assets/sass/njc/_common.scss */
 .public-body #cboxContent #cboxNext {
   background-image: url(/images/icon-next.svg);
 }
 
-/* line 1465, resources/assets/sass/njc/_common.scss */
+/* line 1464, resources/assets/sass/njc/_common.scss */
 .public-body #cboxContent .image-wrap img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 1473, resources/assets/sass/njc/_common.scss */
+/* line 1472, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .nav.nav-tabs {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* line 1481, resources/assets/sass/njc/_common.scss */
+/* line 1480, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div,
 .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div {
   -ms-flex: 0 0 100%;
@@ -1636,32 +1635,32 @@ img {
   max-width: 100%;
 }
 
-/* line 1485, resources/assets/sass/njc/_common.scss */
+/* line 1484, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div:not(.h5),
 .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div:not(.h5) {
   margin-bottom: 1.5rem;
 }
 
-/* line 1488, resources/assets/sass/njc/_common.scss */
+/* line 1487, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div.h5,
 .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div.h5 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-/* line 1492, resources/assets/sass/njc/_common.scss */
+/* line 1491, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div ul,
 .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div ul {
   margin-bottom: 0;
 }
 
-/* line 1496, resources/assets/sass/njc/_common.scss */
+/* line 1495, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div ul li label input,
 .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div ul li label input {
   margin-right: .5rem;
 }
 
-/* line 1506, resources/assets/sass/njc/_common.scss */
+/* line 1505, resources/assets/sass/njc/_common.scss */
 .public-body .quicksearch .btn {
   width: 70%;
   padding: 14px;
@@ -1670,12 +1669,12 @@ img {
   font-size: 1.1rem;
 }
 
-/* line 1515, resources/assets/sass/njc/_common.scss */
+/* line 1514, resources/assets/sass/njc/_common.scss */
 .public-body .mediaKomoku {
   max-width: 100%;
 }
 
-/* line 1517, resources/assets/sass/njc/_common.scss */
+/* line 1516, resources/assets/sass/njc/_common.scss */
 .public-body .mediaKomoku .h4 {
   font-size: 26px;
   margin-bottom: 30px;
@@ -1687,7 +1686,7 @@ img {
   color: #000000;
 }
 
-/* line 1527, resources/assets/sass/njc/_common.scss */
+/* line 1526, resources/assets/sass/njc/_common.scss */
 .public-body .mediaKomoku .mediaLinkBoxs,
 .public-body .mediaKomoku .thetaLinkBoxs {
   text-align: center;
@@ -1695,12 +1694,12 @@ img {
   overflow: hidden;
 }
 
-/* line 1535, resources/assets/sass/njc/_common.scss */
+/* line 1534, resources/assets/sass/njc/_common.scss */
 .public-body .btn-disabled {
   opacity: 0.5;
 }
 
-/* line 1540, resources/assets/sass/njc/_common.scss */
+/* line 1539, resources/assets/sass/njc/_common.scss */
 .public-body #map_canvas .markerClusterer {
   background-color: #ff0;
   position: relative;
@@ -1713,7 +1712,7 @@ img {
   border-radius: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   /* line 5, resources/assets/sass/njc/main.scss */
   .public-body {
     /**
@@ -1799,104 +1798,105 @@ img {
   /* line 101, resources/assets/sass/njc/_full.scss */
   .public-body .mapMainPanel .mapSideSearch {
     position: relative;
+    width: 320px;
     max-width: 320px;
     height: calc(100vh - 56px);
   }
-  /* line 105, resources/assets/sass/njc/_full.scss */
+  /* line 106, resources/assets/sass/njc/_full.scss */
   .public-body .mapMainPanel .mapSideSearch .content {
     height: calc(100% - 89px);
     overflow-y: scroll;
   }
-  /* line 110, resources/assets/sass/njc/_full.scss */
+  /* line 111, resources/assets/sass/njc/_full.scss */
   .public-body .mapMainPanel .bkSearchMap {
     width: calc(100% - 320px);
   }
-  /* line 112, resources/assets/sass/njc/_full.scss */
+  /* line 113, resources/assets/sass/njc/_full.scss */
   .public-body .mapMainPanel .bkSearchMap #map_canvas {
     height: calc(100vh - 56px);
   }
-  /* line 117, resources/assets/sass/njc/_full.scss */
+  /* line 118, resources/assets/sass/njc/_full.scss */
   .public-body .mapMainPanel .bkSearchMap #map_canvas #njcBukkenView .mapBkList .mapBkItem:not(:last-child) {
     border-bottom: 1px solid #e7e7e7;
   }
-  /* line 127, resources/assets/sass/njc/_full.scss */
+  /* line 128, resources/assets/sass/njc/_full.scss */
   .public-body #map_canvas #njcBukkenView {
     width: 274px;
     right: 10px;
     top: 80px;
     z-index: 1;
   }
-  /* line 132, resources/assets/sass/njc/_full.scss */
+  /* line 133, resources/assets/sass/njc/_full.scss */
   .public-body #map_canvas #njcBukkenView .overflow {
     height: 300px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  /* line 144, resources/assets/sass/njc/_full.scss */
+  /* line 145, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .h4 {
     border-radius: 4px 4px 0 0;
   }
-  /* line 147, resources/assets/sass/njc/_full.scss */
+  /* line 148, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap {
     padding: 20px 70px;
     border-radius: 0 0 4px 4px;
   }
-  /* line 152, resources/assets/sass/njc/_full.scss */
+  /* line 153, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap .surroundings-list.all-view .surroundings-contents {
     width: calc(20% - 10px);
     vertical-align: top;
     display: inline-block;
     margin: 5px;
   }
-  /* line 159, resources/assets/sass/njc/_full.scss */
+  /* line 160, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap .surroundings-list .slick-arrow {
     width: 40px;
     height: 40px !important;
     border-radius: 50%;
     z-index: 1;
   }
-  /* line 164, resources/assets/sass/njc/_full.scss */
+  /* line 165, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap .surroundings-list .slick-arrow:before {
     content: "";
   }
-  /* line 167, resources/assets/sass/njc/_full.scss */
+  /* line 168, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap .surroundings-list .slick-arrow.slick-next {
     right: -50px;
   }
-  /* line 170, resources/assets/sass/njc/_full.scss */
+  /* line 171, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .surroundings-list-wrap .surroundings-list .slick-arrow.slick-prev {
     left: -50px;
   }
-  /* line 177, resources/assets/sass/njc/_full.scss */
+  /* line 178, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings .change-all-view-btn.bk-count-5, .public-body .surroundings .change-all-view-btn.bk-count-4, .public-body .surroundings .change-all-view-btn.bk-count-3, .public-body .surroundings .change-all-view-btn.bk-count-2, .public-body .surroundings .change-all-view-btn.bk-count-1 {
     display: none;
   }
-  /* line 187, resources/assets/sass/njc/_full.scss */
+  /* line 188, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings-summary-wrap ul {
     overflow: hidden;
     clear: both;
   }
-  /* line 190, resources/assets/sass/njc/_full.scss */
+  /* line 191, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings-summary-wrap ul li {
     display: inline-block;
     min-width: 50%;
     float: left;
   }
-  /* line 194, resources/assets/sass/njc/_full.scss */
+  /* line 195, resources/assets/sass/njc/_full.scss */
   .public-body .surroundings-summary-wrap ul li .surrounding-name {
     margin-right: 10px;
   }
-  /* line 201, resources/assets/sass/njc/_full.scss */
+  /* line 202, resources/assets/sass/njc/_full.scss */
   .public-body #cboxLoadedContent {
     padding: 10px;
   }
-  /* line 205, resources/assets/sass/njc/_full.scss */
+  /* line 206, resources/assets/sass/njc/_full.scss */
   .public-body #cboxLoadedContent .surroundings-contents-pop .surrounding-image-pop .image-wrap {
     position: relative;
     width: 100%;
     padding-top: 75%;
   }
-  /* line 209, resources/assets/sass/njc/_full.scss */
+  /* line 210, resources/assets/sass/njc/_full.scss */
   .public-body #cboxLoadedContent .surroundings-contents-pop .surrounding-image-pop .image-wrap img {
     position: absolute;
     top: 0;
@@ -1907,23 +1907,23 @@ img {
     max-width: 100%;
     max-height: 100%;
   }
-  /* line 221, resources/assets/sass/njc/_full.scss */
+  /* line 222, resources/assets/sass/njc/_full.scss */
   .public-body #cboxLoadedContent .surroundings-contents-pop .surrounding-message {
     max-width: 640px;
     padding: 10px 30px 0 0;
     font-size: .9rem;
   }
-  /* line 225, resources/assets/sass/njc/_full.scss */
+  /* line 226, resources/assets/sass/njc/_full.scss */
   .public-body #cboxLoadedContent .surroundings-contents-pop .surrounding-message .surrounding-name,
   .public-body #cboxLoadedContent .surroundings-contents-pop .surrounding-message .surrounding-range {
     display: inline;
     line-height: 1.5;
   }
-  /* line 233, resources/assets/sass/njc/_full.scss */
+  /* line 234, resources/assets/sass/njc/_full.scss */
   .public-body #cboxContent {
     margin: 0 50px 20px;
   }
-  /* line 235, resources/assets/sass/njc/_full.scss */
+  /* line 236, resources/assets/sass/njc/_full.scss */
   .public-body #cboxContent #cboxCurrent {
     top: auto;
     right: 0;
@@ -1931,69 +1931,69 @@ img {
     float: unset;
     text-align: center;
   }
-  /* line 242, resources/assets/sass/njc/_full.scss */
+  /* line 243, resources/assets/sass/njc/_full.scss */
   .public-body #cboxContent #cboxPrevious {
     left: -50px;
   }
-  /* line 245, resources/assets/sass/njc/_full.scss */
+  /* line 246, resources/assets/sass/njc/_full.scss */
   .public-body #cboxContent #cboxNext {
     right: -50px;
   }
-  /* line 258, resources/assets/sass/njc/_full.scss */
+  /* line 259, resources/assets/sass/njc/_full.scss */
   .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div ul li,
   .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div ul li {
     float: left;
     padding: 0 5px;
     min-width: 25%;
   }
-  /* line 264, resources/assets/sass/njc/_full.scss */
+  /* line 265, resources/assets/sass/njc/_full.scss */
   .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div select,
   .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div select {
     width: 25%;
   }
-  /* line 267, resources/assets/sass/njc/_full.scss */
+  /* line 268, resources/assets/sass/njc/_full.scss */
   .public-body .quicksearch .quickSearchRent .searchBoxInner .row > div .afterSelectText,
   .public-body .quicksearch .quickSearchSale .searchBoxInner .row > div .afterSelectText {
     margin: 0 10px;
   }
-  /* line 277, resources/assets/sass/njc/_full.scss */
+  /* line 278, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs,
   .public-body .mediaKomoku .thetaLinkBoxs {
     padding: 30px;
     border-radius: 4px;
   }
-  /* line 282, resources/assets/sass/njc/_full.scss */
+  /* line 283, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs iframe.youtubePlayer,
   .public-body .mediaKomoku .thetaLinkBoxs iframe.youtubePlayer {
     width: 640px;
     height: 360px;
   }
-  /* line 287, resources/assets/sass/njc/_full.scss */
+  /* line 288, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs .mediaLinkComment,
   .public-body .mediaKomoku .thetaLinkBoxs .mediaLinkComment {
     display: inline-block;
     width: 640px;
     text-align: left;
   }
-  /* line 292, resources/assets/sass/njc/_full.scss */
+  /* line 293, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs .thetaPlayerWrap,
   .public-body .mediaKomoku .thetaLinkBoxs .thetaPlayerWrap {
     float: left;
     width: 80%;
   }
-  /* line 296, resources/assets/sass/njc/_full.scss */
+  /* line 297, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs .theta-select,
   .public-body .mediaKomoku .thetaLinkBoxs .theta-select {
     float: left;
     width: 20%;
     padding-left: 30px;
   }
-  /* line 300, resources/assets/sass/njc/_full.scss */
+  /* line 301, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs .theta-select .btn-theta,
   .public-body .mediaKomoku .thetaLinkBoxs .theta-select .btn-theta {
     width: 100%;
   }
-  /* line 302, resources/assets/sass/njc/_full.scss */
+  /* line 303, resources/assets/sass/njc/_full.scss */
   .public-body .mediaKomoku .mediaLinkBoxs .theta-select .btn-theta:not(:last-child),
   .public-body .mediaKomoku .thetaLinkBoxs .theta-select .btn-theta:not(:last-child) {
     margin-bottom: 10px;

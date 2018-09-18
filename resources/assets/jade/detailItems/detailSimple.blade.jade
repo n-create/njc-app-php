@@ -49,14 +49,18 @@
                     |<?php } ?>
             |<?php } ?>
 |<?php
-|   $imgPath = PATH_NOPHOTO_IMG;
+|   $imgData = null;
 |   if(!empty($detailData[$searchManager::BK_DATA_IMAGES])) {
-|       $imgPath = $searchManager->getMainImagePath($detailData[$searchManager::BK_DATA_IMAGES], $rentSaleStr);
+|       $imgData = $searchManager->getMainImagePath($detailData[$searchManager::BK_DATA_IMAGES], $rentSaleStr);
+|   }
+|   $bkName = $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_NAME, null);
+|   if("-" === $bkName) {
+|       $bkName = $searchManager->createLinkTitle($rentSaleStr, $detailData);
 |   }
 |?>
-|<?php if(!empty($imgPath)) { ?>
+|<?php if(!empty($imgData)) { ?>
 .col-md-6
     .bk-detail-sub-image-wrapper.p-2
         .bk-detail-sub-image-inner
-            img(src="{{ $imgPath }}")
+            img(src="{{ $imgData['path'] }}", alt="{{ $bkName }} {{ $imgData['comment'] }}")
 |<?php } ?>

@@ -17,7 +17,7 @@
                     |       $imgPath = $resultData[$searchManager::BK_DATA_IMAGES][0]['path']['large'];
                     |   }
                     |?>
-                    img(src="{{ $imgPath }}")
+                    img(src="{{ $imgPath }}", alt="{{ $title }}")
         .bk-body.card-body
             .disp-contents
                 |<?php if($isMatome) { ?>

@@ -19,6 +19,14 @@ select(name!="{{ $rKey }}", class!="{{ $rKey }}").form-control
     option(value!="{{ $dataValue }}")
         | {{ $text }}
     |<?php } ?>
-|<?php if("min" == substr($rKey, -3)) { ?>
-span.afterSelectText(class!="{{ $rKey }}") 〜
+|<?php
+|   $afterText = "";
+|   if("min" == substr($rKey, -3)) {
+|       $afterText = "〜";
+|   } else if($searchManager::BK_DATA_EKITOHO === $key) {
+|       $afterText = "m以内";
+|   }
+|?>
+|<?php if(!empty($afterText)) { ?>
+span.afterSelectText(class!="{{ $rKey }}") {{ $afterText }}
 |<?php } ?>

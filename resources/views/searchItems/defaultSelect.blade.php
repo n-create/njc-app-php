@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <?php
   $defaultText = "";
@@ -15,4 +16,12 @@
   <option value="">{{ $defaultText }}</option><?php } ?>
   <?php foreach($master['search'] as $dataValue => $text) { ?>
   <option value="{{ $dataValue }}">{{ $text }}</option><?php } ?>
-</select><?php if("min" == substr($rKey, -3)) { ?><span class="afterSelectText {{ $rKey }}">〜</span><?php } ?>
+</select><?php
+  $afterText = "";
+  if("min" == substr($rKey, -3)) {
+      $afterText = "〜";
+  } else if($searchManager::BK_DATA_EKITOHO === $key) {
+      $afterText = "m以内";
+  }
+?>
+<?php if(!empty($afterText)) { ?><span class="afterSelectText {{ $rKey }}">{{ $afterText }}</span><?php } ?>

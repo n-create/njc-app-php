@@ -33,16 +33,16 @@ if (undefined === this.NJC.surroundingSlick) {
                     $(cb[num]).colorbox(colorConf);
                     $(document).on('cbox_load', function() {
                         setTimeout(function() {
-                           $(this).colorbox.resize();
+                           <any>$(this).colorbox.resize();
                             _setCenterCboxDialog();
                         }, 50);
                     });
                     $(document).on('cbox_complete', function() {
-                       $(this).colorbox.resize();
+                       <any>$(this).colorbox.resize();
                         _setCenterCboxDialog();
                     });
                     $(window).on('resize', function() {
-                       $(this).colorbox.resize();
+                       <any>$(this).colorbox.resize();
                         _setCenterCboxDialog();
                     });
                 }

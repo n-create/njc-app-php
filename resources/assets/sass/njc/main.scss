@@ -4,7 +4,7 @@
 @import "reset";
 .public-body {
     @import "common";
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         @import "full";
     }
     @media (max-width: 768px) {

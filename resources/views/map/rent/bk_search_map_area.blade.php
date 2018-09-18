@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <div class="parts">
   <div class="h3 mb-3">町域を選択してください。</div>
@@ -35,6 +36,7 @@
         <li id="{{ $id }}" data-postal-code="{{ $value }}" class="njcAreaListAjax"><span class="clickable">{{ $text }}</span></li><?php } ?>
         <?php } ?>
       </ul><?php } ?>
+      <div id="mapDialog-Btn-Back" class="btn btn-outline-secondary"><a target="_self" class="mapDialogBack">戻る</a></div>
     </div>
   </div>
 </div>

@@ -1,7 +1,14 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
+?>
+<?php
+  $bkName = $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_NAME, null);
+  if("-" === $bkName) {
+      $bkName = $searchManager->createLinkTitle($rentSaleStr, $detailData);
+  }
 ?>
 <?php if (0 < count($detailData[$searchManager::BK_DATA_IMAGES])) { ?>
 <div class="galleriffic-slide clearfix p-3">
@@ -14,12 +21,14 @@
       </div>
     </div>
     <div id="thumbs" style="display: none;" class="navigation col-md-5 d-none d-sm-block">
-      <ul class="thumbs clearfix row"><?php foreach($detailData[$searchManager::BK_DATA_IMAGES] as $num => $imgData) { ?>
-        <li class="col-xl-3 col-4 mt-1 mb-1"><a href="{{ $imgData['path']['large'] }}" title="{{ $imgData['comment'] }}" class="thumb main-image-link"><img src="{{ $imgData['path']['large'] }}" alt="{{ $imgData['comment'] }}"/></a>
+      <ul class="thumbs clearfix row">
+        <?php foreach($detailData[$searchManager::BK_DATA_IMAGES] as $num => $imgData) { ?>
+        <?php $comment = trim("{$bkName} {$searchManager->getImageCategoryName($imgData['type'])} {$imgData['comment']}"); ?>
+        <li class="col-xl-3 col-4 mt-1 mb-1"><a href="{{ $imgData['path']['large'] }}" title="{{ $comment }}" class="thumb main-image-link"><img src="{{ $imgData['path']['large'] }}" alt="{{ $comment }}"/></a>
           <div class="caption">
             <div class="slideshow"><span class="image-wrapper">
                 <div class="image-contents">
-                  <div rel="cbviewer" href="{{ $imgData['path']['large'] }}" title="{{ $imgData['comment'] }}" class="advance-link"><img src="{{ $imgData['path']['large'] }}" alt="{{ $imgData['comment'] }}"/></div>
+                  <div rel="cbviewer" href="{{ $imgData['path']['large'] }}" title="{{ $comment }}" class="advance-link"><img src="{{ $imgData['path']['large'] }}" alt="{{ $comment }}"/></div>
                   <div class="image-contents-bottom p-2 clearfix">
                     <div class="image-description float-left">{{ $imgData['comment'] }}</div>
                     <div class="image-num float-right">{{ ($num + 1) }} / {{ count($detailData[$searchManager::BK_DATA_IMAGES]) }}</div>

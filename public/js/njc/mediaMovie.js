@@ -4,7 +4,7 @@
  */
 $(function () {
     $('.movie-disp-wrap').click(function () {
-        if (window.matchMedia('(max-width:767px)').matches) {
+        if (window.matchMedia('(max-width:768px)').matches) {
             var $this = $(this);
             var $movieBtn = $this.find('.control-btn');
             var $target = $('#' + $this.attr('data-ng-target-id'));

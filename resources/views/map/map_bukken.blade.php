@@ -46,7 +46,7 @@
       var isSlick = false;
   
       function slickChange() {
-          if (window.matchMedia('(max-width:767px)').matches) {
+          if (window.matchMedia('(max-width:768px)').matches) {
               if(!isSlick) {
                   $('#bkTinyList').slick({
                       slidesToShow: 1,

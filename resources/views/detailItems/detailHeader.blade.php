@@ -1,9 +1,12 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
-    $nowUrl = app('request')->url();
-    $moneyText = (RS_STR_RENT === $rentSaleStr) ? '賃料' : '価格';
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
+?>
+<?php
+  $nowUrl = app('request')->url();
+  $moneyText = (RS_STR_RENT === $rentSaleStr) ? '賃料' : '価格';
 ?>
 <div class="bk-detail-top-data mb-3">
   <div class="bk-detail-top-title-area mb-1">
@@ -54,13 +57,14 @@
               $mailText = "物件名：{$bkName}%0D%0A" .
                           "住所：{$bkAddr}%0D%0A" .
                           "{$bkMoneyName}：{$bkMoney}%0D%0A";
+              $mailText = rawurlencode($mailText);
             ?>
             <button type="button" onclick="location.href='mailto:?subject=おすすめの物件&amp;body={{ $mailText }}{{ $nowUrl }}'" class="btn btn-info btn-sm sendarticle_m180 sendInfoMail">物件情報をメールで送る</button>
           </div>
         </div>
         <div>
           <?php
-            $msg = "〇〇不動産のホームページで見つけた物件を送ります。%0D%0A{$mailText}";
+            $msg = rawurlencode("〇〇不動産のホームページで見つけた物件を送ります。\r\n").$mailText;
             $lineUrl = "https://social-plugins.line.me/lineit/share?url={$nowUrl}&text={$msg}{$nowUrl}";
           ?>
           <button type="button" onclick="window.open('{{ $lineUrl }}');" class="lineimage btn btn-sm btn-sns d-inline-block mr-1">

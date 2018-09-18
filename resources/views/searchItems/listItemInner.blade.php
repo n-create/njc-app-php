@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <?php $link = "/{$rentSaleStr}/detail/{$resultData[$searchManager::BK_DATA_ID]}"; ?>
 <?php $title = $searchManager->createLinkTitle($rentSaleStr, $resultData); ?>
@@ -15,7 +16,7 @@
             if(isset($resultData[$searchManager::BK_DATA_IMAGES][0]['path']['large'])) {
                 $imgPath = $resultData[$searchManager::BK_DATA_IMAGES][0]['path']['large'];
             }
-          ?><img src="{{ $imgPath }}"/>
+          ?><img src="{{ $imgPath }}" alt="{{ $title }}"/>
         </div>
       </div></a>
     <div class="bk-body card-body">

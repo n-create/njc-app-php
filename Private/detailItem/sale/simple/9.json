@@ -6,17 +6,17 @@
     ]
   },
   {
-    "name": "間取り/間取り内訳",
-    "text": [
-      "room_type",
-      "room_type_detail"
-    ]
-  },
-  {
     "name": "管理費/修繕積立金",
     "text": [
       "kanri",
       "syuzen"
+    ]
+  },
+  {
+    "name": "間取り/間取り内訳",
+    "text": [
+      "room_type",
+      "room_type_detail"
     ]
   },
   {
