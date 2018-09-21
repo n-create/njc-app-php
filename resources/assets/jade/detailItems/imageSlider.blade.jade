@@ -1,0 +1,42 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php if (0 < count($detailData[$searchManager::BK_DATA_IMAGES])) { ?>
+div.galleriffic-slide.clearfix.p-3
+    div.row
+        div#gallery.content.col-md-7.mb-md-0.mb-2
+            div.slideshow-container
+                div#controls
+                div#loading
+                div#caption
+        div#thumbs.navigation(style="display: none;").col-md-5.d-none.d-sm-block
+            ul.thumbs.clearfix.row
+                |<?php foreach($detailData[$searchManager::BK_DATA_IMAGES] as $num => $imgData) { ?>
+                li.col-xl-3.col-4.mt-1.mb-1
+                    a.thumb.main-image-link(href!="{{ $imgData['path']['large'] }}", title!="{{ $imgData['comment'] }}")
+                        img(src!="{{ $imgData['path']['large'] }}", alt!="{{ $imgData['comment'] }}")
+                    div.caption
+                        div.slideshow
+                            span.image-wrapper
+                                div.image-contents
+                                    div.advance-link(rel="cbviewer", href!="{{ $imgData['path']['large'] }}", title!="{{ $imgData['comment'] }}")
+                                        img(src!="{{ $imgData['path']['large'] }}", alt!="{{ $imgData['comment'] }}")
+                                    div.image-contents-bottom.p-2.clearfix
+                                        div.image-description.float-left {{ $imgData['comment'] }}
+                                        div.image-num.float-right {{ ($num + 1) }} / {{ count($detailData[$searchManager::BK_DATA_IMAGES]) }}
+                |<?php } ?>
+            p.thumbs-des.mb-0 画像をクリックすると拡大されます。
+|<?php
+|   $script_files = [
+|       '/js/components/galleriffic/jquery.galleriffic.js',
+|       '/js/components/galleriffic/jquery.history.js',
+|       '/js/components/galleriffic/jquery.opacityrollover.js',
+|       '/js/njc/customGalleriffic.js',
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+|<?php } ?>

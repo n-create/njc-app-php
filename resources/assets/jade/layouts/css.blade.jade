@@ -1,0 +1,15 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $css_files = [
+|       "/css/njc/main.css",
+|       "/css/components/bootstrap/bootstrap.min.css",
+|       "/css/components/jquery/jquery-ui.min.css",
+|   ];
+|?>
+|<?php foreach($css_files as $filePath) { ?>
+link(rel="stylesheet", type="text/css", href!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>

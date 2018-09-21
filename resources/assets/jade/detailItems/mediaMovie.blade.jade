@@ -1,0 +1,44 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $media = !empty($detailData[$searchManager::BK_DATA_MEDIA]) ? $detailData[$searchManager::BK_DATA_MEDIA] : [];
+|   $youtube = !empty($media[$searchManager::BK_DATA_YOUTUBE]) ? $media[$searchManager::BK_DATA_YOUTUBE] : [];
+|?>
+|<?php if(!empty($youtube)) { ?>
+div.mediaKomoku.movie-parts.mb-3.col
+    div.h4(data-subtitle="MOVIE") 動画
+    div.mediaLinkBoxs
+        |<?php foreach($youtube as $num => $mediaData) { ?>
+        |<?php
+        |   $url = $mediaData['link'];
+        |   if(false === strpos($url, 'www.youtube.com')) {
+        |       continue;
+        |   }
+        |   if(false !== strpos($url, 'http://')) {
+        |       $url = str_replace('http://', 'https://', $url);
+        |   }
+        |?>
+        a.movie-disp-wrap.movie-no-1.sp-view(data-ng-target-id!="movie{{ ($num + 1) }}")
+            span.control-img-sp
+                span.control-img-sp-conts
+            span.control-txt-sp
+                p.control-txt-sp-conts.text-left.mb-0.px-1 この物件の様子を動画で見る
+            span.control-btn-sp
+                span.control-btn.tmOpenIcon.btn.btn-dark.btn-sm 開く
+        div.mediaLinkBox.pc-view(id!="movie{{ ($num + 1) }}")
+            div.youtubePlayerWrap
+                iframe.youtubePlayer(src!="{{ $url }}", frameborder="0", title="", allow="encrypted-media")
+            div.mediaLinkComment.p-2.text-left {{ $mediaData['comment'] }}
+        |<?php } ?>
+|<?php
+|   $script_files = [
+|       '/js/njc/mediaMovie.js',
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+|<?php } ?>

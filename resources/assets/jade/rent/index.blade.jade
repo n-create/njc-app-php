@@ -1,0 +1,43 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|@extends('layouts.default')
+|@section('contents')
+.container.searchBox(class!="{{ RS_STR_RENT }}")
+    form#bkSearch.rentSearch.jyoken(method="get", action!="/{{ RS_STR_RENT }}/result")
+        .searchIndex
+            .headTitle
+                .h2(data-subtitle="SEARCH")
+                    | 賃貸物件検索
+            .headBox
+                .search-decription
+                    | 条件を指定して検索ボタンを押してください。選択せずに検索するとすべての物件が表示されます。
+            .searchBox
+                |<?php
+                |   $searchManager = new App\Services\Helper\SearchItemHelper();
+                |   $dispSearch = [
+                |       $searchManager::BK_DATA_BILDTYPE,
+                |       $searchManager::BK_DATA_MONEY,
+                |       $searchManager::BK_DATA_MONEY_ETC,
+                |       $searchManager::BK_DATA_MADORI,
+                |       $searchManager::BK_DATA_AREASIZE,
+                |       $searchManager::BK_DATA_POSITION,
+                |       $searchManager::BK_DATA_NEWBILD,
+                |       $searchManager::BK_DATA_BILDDATE,
+                |       $searchManager::BK_DATA_NEWCOME,
+                |       $searchManager::BK_DATA_EKITOHO,
+                |       $searchManager::BK_DATA_IMAGES,
+                |       $searchManager::BK_DATA_KODAWARI,
+                |       $searchManager::BK_DATA_FREEWORD,
+                |   ];
+                |   $rentSaleStr = RS_STR_RENT;
+                |?>
+                |@include ('searchItems.indexSearchBox', [$searchManager, $dispSearch, $rentSaleStr])
+        .searchBtnBox
+            .inner180
+                .whole180
+                    button.btn.btn-default.bkSearch_submit(type="submit")
+                        | この条件で検索
+|@endsection

@@ -1,0 +1,72 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $searchManager = new App\Services\Helper\SearchItemHelper();
+|   $postData = app('request')->all();
+|   $resultData = $postData['resultData'];
+|   $rentSaleStr = RS_STR_RENT;
+|   $link = "/{$rentSaleStr}/detail/{$resultData[$searchManager::BK_DATA_ID]}";
+|   $title = $searchManager->createLinkTitle($rentSaleStr, $resultData);
+|?>
+div
+    .row
+        .bundle-parent.col-md-3.mb-sm-3
+            img.img(src="{{ $postData['img'] }}")
+        .disp-contents.col-md-9
+            .crui_name.badge.badge-dark.mb-1 {{ (empty($resultData[$searchManager::BK_DATA_BILDTYPE]['value']) ? '-' : $resultData[$searchManager::BK_DATA_BILDTYPE]['value']) }}
+            .bk-title
+                a(href="{{ $link }}", title="{{ $title }}", target="_blank")
+                    | {{ empty($resultData['name']) ? $title : $resultData['name'] }}
+            .disp-main-item
+                |<?php
+                |   $buildType = $resultData[$searchManager::BK_DATA_BILDTYPE]['key'];
+                |   $dispItem = $searchManager->getBkResultTemplateData($searchManager::BK_DISPITEM_KEY_MAIN, $rentSaleStr, $buildType, true);
+                |?>
+                |@include ('searchItems.listInlineItem', [$searchManager, $rentSaleStr, $resultData, $dispItem])
+            .ad-kotu.list-inline-item
+                |<?php if(!empty($resultData[$searchManager::BK_DATA_ADDRESS])) { ?>
+                span(class!="{{ $searchManager::BK_DATA_ADDRESS }}")
+                    a(href="{{ $link }}", title="{{ $title }}", target="_blank")
+                        p.ad_value {{ $resultData[$searchManager::BK_DATA_ADDRESS] }}
+                |<?php } ?>
+                |<?php $trafficData = $searchManager->getAndConvertTrafficData($resultData[$searchManager::BK_DATA_TRAFFIC]); ?>
+                |<?php if(!empty($trafficData[0])) { ?>
+                span(class!="{{ $trafficData[0]['class'] }}")
+                    a(href="{{ $link }}", title="{{ $title }}", target="_blank")
+                        p.kotu_value {{ $trafficData[0]['text'] }}
+                |<?php } ?>
+    .disp-sub-item.mt-2
+        table.table.mb-0
+            tbody
+                |<?php if(isset($resultData[$searchManager::BK_DATA_ROOMS])) { ?>
+                |<?php foreach($resultData[$searchManager::BK_DATA_ROOMS] as $data) { ?>
+                |<?php $link = "/{$rentSaleStr}/detail/{$data[$searchManager::BK_DATA_ID]}"; ?>
+                tr
+                    td(class!="sub_content")
+                        a(href!="{{ $link }}", title!="{{ $title }}", target="_blank")
+                            div.link_content
+                                |<?php
+                                |   $dispItem = $searchManager->getBkResultTemplateData($searchManager::BK_DISPITEM_KEY_MATOME, $rentSaleStr, $buildType, true);
+                                |?>
+                                |@include ('searchItems.listInlineItem', [
+                                |   'searchManager' => $searchManager,
+                                |   'rentSaleStr' => $rentSaleStr,
+                                |   'resultData' => $data,
+                                |   'dispItem' => $dispItem
+                                |])
+                    td.sub_link
+                        div.link
+                            a(href="{{ $link }}", title="{{ $title }}", target="_blank").btn.btn-sm
+                                |詳細
+                |<?php $comment = $searchManager->getPrComment($data, false); ?>
+                |<?php if(!empty($comment)) { ?>
+                tr
+                    td(class!="sub_comment", colspan="2")
+                        .pr_comment
+                            | <?= implode("<br>", $comment); ?>
+                |<?php } ?>
+                |<?php } ?>
+                |<?php } ?>

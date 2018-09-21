@@ -1,0 +1,19 @@
+FROM debian:jessie
+
+RUN apt-get update -y && apt-get install -y npm
+RUN apt-get install -y curl git
+RUN curl -sL https://deb.nodesource.com/setup | bash --
+RUN apt-get install -y nodejs
+CMD npm update -g npm
+CMD npm cache clean --force
+RUN npm install -g n && n stable
+RUN npm install -g npm
+RUN apt-get purge -y nodejs npm
+RUN npm i -g gulp-cli
+RUN npm install gulp
+
+WORKDIR /var/www/html
+
+ENTRYPOINT ["gulp"]
+CMD ["-h"]
+

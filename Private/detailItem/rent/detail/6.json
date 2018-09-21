@@ -1,0 +1,210 @@
+{
+  "initial": [
+    {
+      "name": "月々　その他",
+      "cols": 3,
+      "text": [
+        "etc_kin"
+      ]
+    },
+    {
+      "name": "保証金",
+      "cols": 1,
+      "text": [
+        "hosyokin"
+      ]
+    },
+    {
+      "name": "敷引・償却金",
+      "cols": 1,
+      "text": [
+        "sikibikikin"
+      ]
+    },
+    {
+      "name": "保険料",
+      "cols": 1,
+      "text": [
+        "hoken_ryokin"
+      ]
+    },
+    {
+      "name": "更新料",
+      "cols": 1,
+      "text": [
+        "koshin_ryokin"
+      ]
+    },
+    {
+      "name": "仲介手数料",
+      "cols": 2,
+      "text": [
+        "cyukai_ryokin"
+      ]
+    },
+    {
+      "name": "保険契約年数",
+      "cols": 1,
+      "text": [
+        "hoken_year"
+      ]
+    },
+    {
+      "name": "賃貸保証内容",
+      "cols": 2,
+      "text": [
+        "yachinhosyo"
+      ]
+    },
+    {
+      "name": "一時金　その他",
+      "cols": 3,
+      "text": [
+        "etc_ichiji_kin"
+      ]
+    },
+    {
+      "name": "面積",
+      "cols": 1,
+      "text": [
+        "area_size"
+      ]
+    },
+    {
+      "name": "建物階数",
+      "cols": 2,
+      "text": [
+        "building_floor",
+        "building_underground"
+      ]
+    },
+    {
+      "name": "現況",
+      "cols": 1,
+      "text": [
+        "state"
+      ]
+    },
+    {
+      "name": "入居時期",
+      "cols": 1,
+      "text": [
+        "nyukyo"
+      ]
+    },
+    {
+      "name": "取引態様",
+      "cols": 1,
+      "text": [
+        "torihiki_taiyo"
+      ]
+    },
+    {
+      "name": "設備",
+      "cols": 3,
+      "text": [
+        "setubi_options"
+      ]
+    },
+    {
+      "name": "情報更新日",
+      "cols": 1,
+      "text": [
+        "updated_at"
+      ]
+    },
+    {
+      "name": "掲載期限日",
+      "cols": 2,
+      "text": [
+        "open_at"
+      ]
+    }
+  ],
+  "etcetera": [
+    {
+      "name": "駐車場",
+      "cols": 1,
+      "text": [
+        "parking_type"
+      ]
+    },
+    {
+      "name": "駐車料",
+      "cols": 1,
+      "text": [
+        "parking_ryokin"
+      ]
+    },
+    {
+      "name": "駐車台数空き",
+      "cols": 1,
+      "text": [
+        "parking_daisu_aki"
+      ]
+    },
+    {
+      "name": "駐輪台数",
+      "cols": 1,
+      "text": [
+        "bicycle_parking_daisu"
+      ]
+    },
+    {
+      "name": "駐車場備考",
+      "cols": 2,
+      "text": [
+        "parking_biko"
+      ]
+    },
+    {
+      "name": "向き",
+      "cols": 1,
+      "text": [
+        "muki"
+      ]
+    },
+    {
+      "name": "建物構造",
+      "cols": 2,
+      "text": [
+        "structure_type"
+      ]
+    },
+    {
+      "name": "周辺環境",
+      "cols": 1,
+      "text": [
+        "arounds"
+      ]
+    },
+    {
+      "name": "定期借地借家",
+      "cols": 2,
+      "text": [
+        "teisyaku_exist"
+      ]
+    },
+    {
+      "name": "特記事項",
+      "cols": 3,
+      "text": [
+        "tokki"
+      ]
+    },
+    {
+      "name": "契約条件",
+      "cols": 3,
+      "text": [
+        "jyoken_options"
+      ]
+    },
+    {
+      "name": "備考",
+      "cols": 3,
+      "text": [
+        "biko"
+      ]
+    }
+  ]
+}

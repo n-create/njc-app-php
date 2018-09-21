@@ -1,0 +1,27 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php $link = "/{$rentSaleStr}/detail/{$resultData[$searchManager::BK_DATA_ID]}"; ?>
+|<?php $title = $searchManager->createLinkTitle($rentSaleStr, $resultData); ?>
+|<?php $isMatome = (RS_STR_RENT === $rentSaleStr) ? true : false; ?>
+.col-md-6.col-lg-4.mb-4
+    .list-item-inner.card
+        a.img.card-img-top(href="{{ $link }}", title="{{ $title }}", target="_blank")
+            .listGazo.text-center
+                .GazoImg
+                    |<?php
+                    |   $imgPath = PATH_NOPHOTO_IMG;
+                    |   if(isset($resultData[$searchManager::BK_DATA_IMAGES][0]['path']['large'])) {
+                    |       $imgPath = $resultData[$searchManager::BK_DATA_IMAGES][0]['path']['large'];
+                    |   }
+                    |?>
+                    img(src="{{ $imgPath }}")
+        .bk-body.card-body
+            .disp-contents
+                |<?php if($isMatome) { ?>
+                |@include ('searchItems.listItemInnerMatome', [$searchManager, $rentSaleStr, $resultData, $link, $title])
+                |<?php } else { ?>
+                |@include ('searchItems.listItemInnerNormal', [$searchManager, $rentSaleStr, $resultData, $link, $title])
+                |<?php } ?>

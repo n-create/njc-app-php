@@ -1,0 +1,36 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+ul(class!="main_{{ $rKey }}")
+    |<?php if(is_array($master['search'])) { ?>
+    |<?php foreach($master['search'] as $dataValue => $text) { ?>
+    li(class!="sub_{{ $rKey }}")
+        label.form-control
+            |<?php if ("" === $dataValue) { ?>
+            input.checksubmit(
+                type!='radio',
+                name!='{{ $rKey }}',
+                class!="child_{{ $rKey }}",
+                value!="{{ $dataValue }}",
+                checked
+            )
+            |<?php } else { ?>
+            input.checksubmit(
+                type!='radio',
+                name!='{{ $rKey }}',
+                class!="child_{{ $rKey }}",
+                value!="{{ $dataValue }}",
+            )
+            |<?php } ?>
+            span
+                |{{ $text }}
+    |<?php } ?>
+    |<?php } else { ?>
+    li(class!="sub_{{ $rKey }}")
+        label.form-control
+            input.checksubmit(type!='radio', name!='{{ $rKey }}', class!="child_{{ $rKey }}", value!="{{ $master['search'] }}")
+            span
+                |{{ $name }}
+    |<?php } ?>

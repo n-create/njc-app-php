@@ -1,0 +1,39 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+.parts
+    .h3.mb-3
+        | 市区町村を選択してください。
+    .clearfix
+        |<?php
+        |   $searchManager = new App\Services\Helper\SearchItemHelper();
+        |   $cityData = $searchManager->getMapCityData(RS_STR_SALE);
+        |   $keyData = $searchManager::$convertKey[$searchManager::BK_DATA_CITY];
+        |?>
+        #mapListDialog
+            |<?php if(is_array($cityData)) { ?>
+            |<?php foreach($cityData as $data) { ?>
+            .h5.mapDialogKen
+                span.clickable
+                    | {{ $data[$keyData['keyText']] }}
+            ul.areaList
+                |<?php foreach($data[$keyData['keyGroup']] as $areaData) { ?>
+                |<?php
+                |   $id = $data[$keyData['keyText']].$areaData[$keyData['keyGroupText']];
+                |   $value = $areaData[$keyData['keyGroupValue']];
+                |   $text = $areaData[$keyData['keyGroupText']];
+                |   if(isset($areaData['count'])) {
+                |       $text .= "(" . $areaData['count'] . "件)";
+                |   }
+                |?>
+                li.njcCityListAjax(label!="{{ $value }}", id!="{{ $id }}")
+                    span.clickable
+                        | {{ $text }}
+                |<?php } ?>
+            |<?php } ?>
+            |<?php } else { ?>
+            div
+                | 登録された物件がありません。
+            |<?php } ?>

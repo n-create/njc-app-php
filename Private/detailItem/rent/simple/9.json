@@ -1,0 +1,41 @@
+[
+  {
+    "name": "賃料/共益費等",
+    "text": [
+      "money",
+      "kyoeki"
+    ]
+  },
+  {
+    "name": "敷金/礼金",
+    "text": [
+      "sikikin",
+      "reikin"
+    ]
+  },
+  {
+    "name": "間取り/間取り内訳",
+    "text": [
+      "room_type",
+      "room_type_detail"
+    ]
+  },
+  {
+    "name": "面積",
+    "text": [
+      "area_size"
+    ]
+  },
+  {
+    "name": "物件種別",
+    "text": [
+      "building_type"
+    ]
+  },
+  {
+    "name": "築年月",
+    "text": [
+      "building_year"
+    ]
+  }
+]

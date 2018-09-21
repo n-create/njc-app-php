@@ -1,0 +1,38 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $searchManager = new App\Services\Helper\SearchItemHelper();
+|   $dispSearch = [
+|       $searchManager::BK_DATA_CITY,
+|   ];
+|?>
+|@extends('layouts.default')
+|@section('contents')
+.container.searchBox(class!="{{ RS_STR_SALE }}")
+    form#bkSearchCheck.saleSearch.area(method="get", action!="/{{ RS_STR_SALE }}/area")
+        .searchIndex
+            .headTitle
+                .h2(data-subtitle="SEARCH")
+                    | 地域から検索
+            .headBox
+                .search-decription
+            .searchBox
+                |<?php foreach($dispSearch as $key) { ?>
+                |<?php
+                |   $master = $searchManager->getBkSearchMaster(RS_STR_SALE, $key);
+                |   $name = $searchManager->getBkItemName(RS_STR_SALE, $key);
+                |?>
+                .searchBoxInner(class!="{{ $key }}")
+                    div.h3(id!="head_{{ $key }}")
+                        | {{ $name }}を選択してください
+                    |@include ('searchItems.searchBoxInner', [$searchManager, $master, $key])
+                |<?php } ?>
+        .searchBtnBox
+            .inner180
+                .whole180
+                    button.btn.btn-default.bkSearch_submit(type="submit", data-alert="地域を選択してください")
+                        | 町域を選択する
+|@endsection

@@ -1,0 +1,27 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+.crui_name.badge.badge-dark.mb-1 {{ (empty($resultData[$searchManager::BK_DATA_BILDTYPE]['value']) ? '-' : $resultData[$searchManager::BK_DATA_BILDTYPE]['value']) }}
+.bk-title.card-title
+    a(href="{{ $link }}", title="{{ $title }}", target="_blank")
+        | {{ empty($resultData[$searchManager::BK_DATA_NAME]) ? $title : $resultData[$searchManager::BK_DATA_NAME] }}
+.disp-main-item
+    |<?php
+    |   $buildType = $resultData[$searchManager::BK_DATA_BILDTYPE]['key'];
+    |   $dispItem = $searchManager->getBkResultTemplateData($searchManager::BK_DISPITEM_KEY_MAIN, $rentSaleStr, $buildType, false);
+    |?>
+    |@include ('searchItems.listInlineItem', [$searchManager, $rentSaleStr, $resultData, $dispItem])
+.disp-sub-item
+    |<?php
+    |   $dispItem = $searchManager->getBkResultTemplateData($searchManager::BK_DISPITEM_KEY_SUB, $rentSaleStr, $buildType, false);
+    |?>
+    |@include ('searchItems.listInlineItem', [$searchManager, $rentSaleStr, $resultData, $dispItem])
+.ad-kotu.list-inline-item
+    |@include ('searchItems.listKotuAd', [$searchManager, $rentSaleStr, $resultData, $dispItem])
+|<?php $comment = $searchManager->getPrComment($resultData, false); ?>
+|<?php if(!empty($comment)) { ?>
+.disp-comment.pr_comment
+    | <?= implode("<br>", $comment); ?>
+|<?php } ?>

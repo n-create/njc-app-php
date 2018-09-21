@@ -1,0 +1,13 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+@import "reset";
+.public-body {
+    @import "common";
+    @media (min-width: 768px) {
+        @import "full";
+    }
+    @media (max-width: 768px) {
+        @import "tiny";
+    }
+}

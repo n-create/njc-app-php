@@ -1,0 +1,20 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+#cboxTitle {
+    color: #333;
+    font-size: 14px;
+    font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN-W3", "HiraKakuProN-W3", sans-serif;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    overflow: hidden;
+    text-align: left;
+}
+#cboxClose {
+    transition: all 0s ease;
+}
+#cboxPrevious ,
+#cboxNext {
+    outline: none;
+    transition: none;
+}

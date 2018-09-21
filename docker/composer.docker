@@ -1,0 +1,16 @@
+FROM php:7.1-fpm
+
+WORKDIR /tmp
+
+RUN apt-get update -y
+RUN apt-get install -y git unzip
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+CMD composer self-update
+CMD composer global require hirak/prestissimo
+
+WORKDIR /var/www/html
+
+ENTRYPOINT ["composer"]
+CMD ["--help"]
+

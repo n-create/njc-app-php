@@ -1,0 +1,49 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $searchManager = new App\Services\Helper\SearchItemHelper();
+|   $dispSearch = [
+|       $searchManager::BK_DATA_SI_SYOGAKU,
+|       $searchManager::BK_DATA_SYOGAKU_KYORI,
+|       $searchManager::BK_DATA_SI_CYUGAKU,
+|       $searchManager::BK_DATA_CYUGAKU_KYORI,
+|   ];
+|?>
+|@extends('layouts.default')
+|@section('contents')
+.container.searchBox(class!="{{ RS_STR_RENT }}")
+    form#bkSearchCheck.rentSearch.school(method="get", action!="/{{ RS_STR_RENT }}/result")
+        .searchIndex
+            .headTitle
+                .h2(data-subtitle="SEARCH")
+                    | 学校区から検索
+            .headBox
+                .search-decription
+            .searchBox
+                |<?php foreach($dispSearch as $key) { ?>
+                |<?php
+                |   $master = $searchManager->getBkSearchMaster(RS_STR_RENT, $key);
+                |   $name = $searchManager->getBkItemName(RS_STR_RENT, $key);
+                |   $linkKey = ($searchManager::BK_DATA_SI_SYOGAKU == $key) ? $searchManager::BK_DATA_SI_CYUGAKU : $searchManager::BK_DATA_SI_SYOGAKU;
+                |?>
+                .searchBoxInner(class!="{{ $key }}")
+                    |<?php if($key == $searchManager::BK_DATA_SI_SYOGAKU || $key == $searchManager::BK_DATA_SI_CYUGAKU) { ?>
+                    div.h3.head_bar(id!="head_{{ $key }}")
+                        | <?= $name; ?>
+                        a.manual-right(href="#head_{{ $linkKey }}")
+                            | {{ $searchManager->getBkItemName(RS_STR_RENT, $linkKey) }}へ
+                    |<?php } else { ?>
+                    div.h5(class!="head_{{ $key }}")
+                        | <?= $name; ?>
+                    |<?php } ?>
+                    |@include ('searchItems.searchBoxInner', [$searchManager, $master, $key])
+                |<?php } ?>
+        .searchBtnBox
+            .inner180
+                .whole180
+                    button.btn.btn-default.bkSearch_submit(type="submit", data-alert="学校区を選択してください")
+                        | この条件で検索
+|@endsection

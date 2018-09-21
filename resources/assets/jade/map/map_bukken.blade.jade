@@ -1,0 +1,107 @@
+div.mapBkList.card(class!="{{ (1 >= count($jsonData)) ? 'noDotsSlider' : '' }}")
+    div.header.card-header
+        div.mapBkCount.float-left
+            span 該当物件数
+            span.njcSliderBukkenCount
+                |{{ count($jsonData) }}
+            span 件
+        div.njcSliderClose.float-right ×
+    div(class!="{{ $rentSaleStr }}")
+        div#bkTinyList.overflow.bk-carousel.p-2
+            |<?php foreach($jsonData as $key => $value) { ?>
+            |<?php
+            |   $searchManager = new App\Services\Helper\SearchItemHelper();
+            |   list($bkImg, $kotu, $bkData) = $searchManager->setAjaxBukkenView($value, false, 'medium');
+            |   $madoMenArr = [];
+            |   if(!empty($bkData[$searchManager::BK_DATA_MADORI])) {
+            |       $madoMenArr[] = $searchManager->setConvertText($rentSaleStr, $searchManager::BK_DATA_MADORI, $bkData[$searchManager::BK_DATA_MADORI]);
+            |   }
+            |   if(!empty($bkData[$searchManager::BK_DATA_AREASIZE])) {
+            |       $madoMenArr[] = $searchManager->setConvertText($rentSaleStr, $searchManager::BK_DATA_AREASIZE, $bkData[$searchManager::BK_DATA_AREASIZE]);
+            |   }
+            |   $madoMen = implode("／", $madoMenArr);
+            |?>
+            div.mapBkItem.row.py-2
+                div.mapBkLeft.col-6
+                    div.text-center
+                        a(href!="/{{ $rentSaleStr }}/detail/{{ $bkData[$searchManager::BK_DATA_ID] }}", title!="{{ $bkImg[0]['comment'] }}", target='_blank')
+                            img(
+                                src!="{{ $bkImg[0]['img'] }}",
+                                alt!="{{ $bkImg[0]['comment'] }}",
+                            )
+                div.mapBkContent.col-6
+                    a(href!="/{{ $rentSaleStr }}/detail/{{ $bkData[$searchManager::BK_DATA_ID] }}", title!="{{ $bkImg[0]['comment'] }}", target='_blank')
+                        .disp-list-item
+                            |<?php
+                            |?>
+                            .crui_name.badge.badge-dark
+                                | {{ (empty($bkData[$searchManager::BK_DATA_BILDTYPE]['value']) ? '-' : $bkData[$searchManager::BK_DATA_BILDTYPE]['value']) }}
+                            |<?php if(!empty($bkData[$searchManager::BK_DATA_MONEY])) { ?>
+                            div(class!="{{ $searchManager::BK_DATA_MONEY }}")
+                                span
+                                    |{{ $searchManager->setConvertText($rentSaleStr, $searchManager::BK_DATA_MONEY, $bkData[$searchManager::BK_DATA_MONEY]) }}
+                            |<?php } ?>
+                            |<?php if(!empty($madoMen)) { ?>
+                            .madomen
+                                |{{ $madoMen  }}
+                            |<?php } ?>
+                            |<?php if(!empty($kotu)) { ?>
+                            div(class!="{{ $searchManager::BK_DATA_TRAFFIC }}")
+                                |{{ $kotu }}
+                            |<?php } ?>
+                        div.clearfix
+                div.clearfix
+            |<?php } ?>
+        div.buttonBg
+script.
+    $(function(){
+        var isSlick = false;
+
+        function slickChange() {
+            if (window.matchMedia('(max-width:767px)').matches) {
+                if(!isSlick) {
+                    $('#bkTinyList').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        dots: true,
+                        infinite: false,
+                        adaptiveHeight: true,
+                        customPaging: function(slider, i) {
+                            var max = $(slider.$slides).length;
+                            return '<span class="nav_page">'+(i+1)+'/'+max+'</span>';
+                        }
+                    });
+                    $('#njcAreaView').on('dialogclose', function() {
+                        $('#bkTinyList').slick('unslick');
+                    });
+                    isSlick = true;
+                }
+            } else {
+                if(isSlick) {
+                    $('#bkTinyList').slick('unslick');
+                    isSlick = false;
+                }
+            }
+        }
+        $(window).on('load resize', function() {
+            slickChange();
+        });
+
+        slickChange();
+    });
+|<?php
+|   $script_files = [
+|       '/js/components/slick/slick.js',
+|   ];
+|   $css_files = [
+|       '/js/components/slick/slick.css',
+|       '/js/components/slick/slick-theme.css',
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+|<?php foreach($css_files as $filePath) { ?>
+link(rel="stylesheet", type="text/css", href!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>

@@ -1,0 +1,90 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php if(!empty($detailData[$searchManager::BK_DATA_MAPOPEN])) { ?>
+|<?php
+|   $mapSearchOption = [
+|       'cruiNo'            => 1,
+|       'icon'               => "/images/map/icon_bukken_map.gif",
+|       'kaiinIcon'          => "/images/map/icon_kaiin.png",
+|       'maxZoomLevel'       => 19,
+|       'minZoomLevel'       => 10,
+|       'zoom'               => 10,
+|       'draggable'          => true,
+|       'chinOrBai'          => (RS_STR_RENT == $rentSaleStr) ? RS_CODE_RENT : RS_CODE_SALE,
+|       'searchObj'          => $searchManager::$searchObject,
+|       'ido'                => $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_IDO, null),
+|       'keido'              => $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_KEIDO, null),
+|       'ctrl'               => 'mapSearch',
+|   ];
+|   $mapIcon = [
+|       'ConvenienceStore' => 'コンビニ',
+|       'laundry' => 'クリーニング店',
+|       'library' => '図書館',
+|       'supermarket' => 'スーパー',
+|       'depart' => '百貨店・モール',
+|       'post' => '郵便局',
+|       'rental' => 'レンタルビデオ',
+|       'school' => '学校',
+|       'parking_map' => '駐車場',
+|       'restaurant' => 'レストラン',
+|       'bank' => '銀行',
+|       'spa' => '温泉・スパ',
+|       'hospital' => '病院',
+|       'park' => '公園',
+|       'atm' => 'ATM',
+|   ];
+|?>
+.h2(data-subtitle="MAP")
+    | 地図
+div.flesh-wrap
+    div.parts.bkDetailMap
+        div.map
+            div
+                div#map_canvas.text-center.mb-2(style!="width:100%; height: 500px;")
+                    img(src="/images/dummy/dummy_map_detail.png").w-100
+                div.nrwMapBtn
+                    span
+                div#shuhenForm.func.bkMapSyuuhenForm.clearfix
+                    p.syuuhen-attension-origin 地図の縮尺度数を拡大すると、以下の周辺情報を表示することができます。
+                    ul.syuuhen-info.row
+                        |<?php foreach($mapIcon as $key => $title) { ?>
+                        li.syuuhen-item.col-lg-3.col-md-4.mb-2
+                            input(type="checkbox", name="mapSearchContents", value!="{{ $key }}", id!="{{ $key }}").d-none
+                            label(for="{{ $key }}", class="{{ $key }}").mb-0.d-block.btn.btn-outline-info.text-left
+                                img(src!="/images/map/icon_{{ $key }}.png", alt!="{{ $title }}").mr-1
+                                | {{ $title }}
+                        |<?php } ?>
+            div#mapRouteWrap.mb-2.p-3.bg-light
+                div.map-attention
+                    p.map-attention-main 地図上を「クリック」すると、物件からその地点までの経路が表示されます。
+                div.mapRoute
+                    ul.routeSelect.btn-group.mb-md-0.mb-1
+                        li.button(tmode="DRIVING").btn.btn-info 自動車
+                        li.onMode.button(tmode="WALKING").btn.btn-info.border-left.active 徒歩
+                    div.routeDistance
+                        p.mapDistanceExplain.mb-0 経路の距離と時間：
+                        div.mapDistanceContext
+                            span.mapDistance -
+                            |，
+                            span.mapDuration -
+            small.map-attention-bottom ※地図上の各種のアイコンなどの情報は、付近住所に所在する事を示すものであり、正確な地点を保証するものではありません。
+|<?php
+|   $script_files = [
+|       GOOGLE_MAPS_API."?key=".env('GOOGLE_MAPS_KEY')."&libraries=places&language=ja",
+|       "/js/njc/map/mapSearch.js",
+|       "/js/njc/map/mapSyuuhenForm.js",
+|       "/js/njc/map/mapDetail.js",
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+script
+    |var bukken = (<?= json_encode($mapSearchOption); ?> );
+    |$(function(){
+    |   var mapDat = new jQuery.mapSearch( <?= json_encode($mapSearchOption) ?> );
+    |});
+|<?php } ?>

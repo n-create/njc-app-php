@@ -1,0 +1,36 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+div.detail-contact-info.card.bg-light
+    div.detail-contact-info-inner
+        div.info-title.card-header この物件のお問い合わせ
+        .card-body
+            div.info-message.mb-2 お電話またはメールでお気軽にお問い合わせください。お電話でのお問い合わせの際は、「物件お問い合わせ番号」をお伝えいただけますとスムーズにご案内することができます。
+            .row.align-items-center
+                .col-md-5
+                    div.info-num.p-3.bg-white.text-center.mb-sm-0.mb-2
+                        span.info-num-title.d-inline-block 物件お問い合わせNo.：
+                        span.info-num-conts.d-inline-block.mb-0.h4.text-danger
+                            |<?php
+                            |   $contactNo = $detailData[$searchManager::BK_DATA_BILDNUM];
+                            |   if(RS_STR_RENT === $rentSaleStr && !empty($detailData[$searchManager::BK_DATA_ROOMNO])) {
+                            |       $contactNo .= "-" . $detailData[$searchManager::BK_DATA_ROOMNO];
+                            |   }
+                            |?>
+                            |{{ $contactNo }}
+                .col-md-7
+                    div.info-telmail.row.align-items-center
+                        div.child.info-tel.col-xl-5
+                            dl.info-tel-conts.mb-sm-0.mb-1
+                                dt.info-st-title TEL
+                                dd.info-st-conts.h3 0120-12-3745
+                        div.child.info-holiday.col-xl-7
+                            dl.info-st.mr-2
+                                dt.info-st-title 営業時間
+                                dd.info-st-conts 9：00～18：00
+                            dl.info-st
+                                dt.info-st-title 定休日
+                                dd.info-st-conts 水曜日・祝日(2月・3月は、定休日なしで営業しております。)
+

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "価格",
+    "text": [
+      "money"
+    ]
+  },
+  {
+    "name": "間取り/間取り内訳",
+    "text": [
+      "room_type",
+      "room_type_detail"
+    ]
+  },
+  {
+    "name": "建物面積",
+    "text": [
+      "building_area_size"
+    ]
+  },
+  {
+    "name": "物件種別",
+    "text": [
+      "building_type"
+    ]
+  },
+  {
+    "name": "築年月",
+    "text": [
+      "building_year"
+    ]
+  }
+]

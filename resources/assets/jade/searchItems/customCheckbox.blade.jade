@@ -1,0 +1,13 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+ul.main(class!="{{ $key }}")
+    |<?php foreach($master['key'] as $name => $text) { ?>
+    li.sub(class!="{{ $key }}")
+        label.form-control
+            input.child.checksubmit(type!='checkbox', name!='{{ $name }}', class!="{{ $key }} {{ $name }}", value!="1")
+            span
+                |{{ $text }}
+    |<?php } ?>

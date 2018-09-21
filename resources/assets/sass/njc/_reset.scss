@@ -1,0 +1,72 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+//
+// リセット
+//
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,
+blockquote,th,td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html,
+body {
+    width: 100%;
+}
+
+html{
+    overflow-y: scroll;
+}
+p{
+    /*margin: 0 0 1em 0;*/
+    margin: 0px;
+}
+ol,ul{
+    list-style: none;
+}
+fieldset,img{
+    border: 0;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption,th{
+    text-align: left;
+}
+address,caption,cite,code,dfn,em,strong,th,var{
+    font-style: normal;
+}
+/*************/
+
+.public-body, body.public-body {
+    /*font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN-W3", "HiraKakuProN-W3", sans-serif;
+    line-height: 1;*/
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*,
+*:before ,
+*:after {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+
+/*
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: bottom;
+}
+
+.text-align-center {
+    text-align: center;
+}
+*/

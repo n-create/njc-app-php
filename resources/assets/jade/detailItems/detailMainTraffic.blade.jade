@@ -1,0 +1,12 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $trafficData = $searchManager->getMergeEnsenBus($detailData[$searchManager::BK_DATA_TRAFFIC]);
+|?>
+|<?php foreach($trafficData['ensen_bus'] as $trafData) { ?>
+p.kotu_value
+    | {{ $trafData }}
+|<?php } ?>

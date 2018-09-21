@@ -1,0 +1,12 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php if($isNoLink) { ?>
+span.btn.btn-white.no-link(class!="{{ $class }}")
+    |{{ $text }}
+|<?php } else { ?>
+a.btn.btn-white(class!="{{ $class }}", href!="{{ $url }}")
+    |{{ $text }}
+|<?php } ?>

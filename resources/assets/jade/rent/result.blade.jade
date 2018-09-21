@@ -1,0 +1,53 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $searchManager = new App\Services\Helper\SearchItemHelper();
+|   $result = $searchManager->getBkResultData(RS_STR_RENT);
+|   $rentSaleStr = RS_STR_RENT;
+|?>
+|@extends('layouts.default')
+|@section('contents')
+.container.resultBox(class!="{{ $rentSaleStr }}")
+    .headTitle
+        .h2(data-subtitle="LIST")
+            | 賃貸物件一覧
+    .bk-result-header.mb-3
+        .header-title
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                .title.navbar-brand
+                    | 別の検索方法で再検索
+                button(type!="button", data-toggle!="collapse", data-target!="#othersearch", aria-controls!="othersearch", aria-expanded!="false", aria-label!="Toggle navigation").navbar-toggler
+                    span.navbar-toggler-icon.othersearch-toggler-icon
+                div(id!="othersearch").collapse.navbar-collapse
+                    ul.value.nav.navbar-nav
+                        |<?php foreach(SEARCH_METHOD as $key => $title) { ?>
+                        |<?php $url = "/{$rentSaleStr}/{$key}"; ?>
+                        li.nav-item
+                            a(href!="{{ $url }}", class!="{{ $key }} {{ ('#' == $url) ? 'no_link': '' }}").nav-link
+                                | {{ $title }}
+                        |<?php } ?>
+    .bk-result-page-wrapper
+        .bk-list-header.mb-3
+            .list-header-child.bg-light
+                |@include ('searchItems.resultHeader', [$searchManager, $rentSaleStr])
+        .bk-list-body
+            .list-item.row
+                |<?php foreach($result as $resultData) { ?>
+                |@include ('searchItems.listItemInner', [$searchManager, $rentSaleStr, $resultData])
+                |<?php } ?>
+        .bk-list-paging
+            .list-page.row.nav-fill
+                |@include ('searchItems.listPagingList', [$searchManager, $rentSaleStr])
+|<?php
+|   $script_files = [
+|       '/js/njc/bkResultBundle.js',
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+.bundle-child-dialog
+|@endsection

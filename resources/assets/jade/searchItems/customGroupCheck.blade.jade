@@ -1,0 +1,35 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $searchList = null;
+|   if(isset($master['search'][$rentSaleStr])) {
+|       $searchList = $master['search'][$rentSaleStr];
+|   }
+|?>
+|<?php if(!empty($searchList)) { ?>
+|<?php foreach($searchList as $searchData) { ?>
+dl.parent.clearfix(class!="{{ $key }}")
+    dt
+        |{{ $searchData['category'] }}
+    dd
+        ul.main(class!="{{ $key }}")
+            |<?php foreach($searchData['list'] as $value => $data) { ?>
+            |<?php $inputName = $data['name']; ?>
+            li.sub(class!="{{ $key }}")
+                label.form-control
+                    |<?php if('setubi_options' == $data['name'] || 'jyoken_options' == $data['name']) { ?>
+                    |<?php
+                    |   if(empty($value)) continue;
+                    |   $temp = explode("_", $value);
+                    |   $inputName = "{$data['name']}[{$temp[0]}][]";
+                    |?>
+                    |<?php } ?>
+                    input.child(type!='checkbox', name!="{{ $inputName }}", class!="{{ $key }}", value!="{{ $value }}")
+                    span
+                        |{{ $data['text'] }}
+            |<?php } ?>
+|<?php } ?>
+|<?php } ?>

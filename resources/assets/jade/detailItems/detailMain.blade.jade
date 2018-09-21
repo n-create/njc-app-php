@@ -1,0 +1,52 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $data = $searchManager->getBkDetailTemplateData($rentSaleStr, $searchManager::BK_TEMPLATE_DETAIL, $detailData[$searchManager::BK_DATA_BILDTYPE]['key']);
+|   $limit = 2;
+|?>
+.h2(data-subtitle="DETAIL")
+    | 物件詳細情報
+div.bk-detail-table-wrap
+    table.table.table-bordered.tableDetail
+        |<?php foreach ($data as $key => $rows) { ?>
+        tbody.main-detail-box(class!="<?= $key; ?>")
+            |<?php foreach ($rows as $rowValues) { ?>
+            tr.detail-row
+                |<?php foreach ($rowValues as $rowValue) { ?>
+                |<?php $colspan = intval($rowValue['cols']) * 2 - 1; ?>
+                th.detail-col.table-light
+                    div {{ $rowValue['name'] }}
+                td.detail-col(colspan!="{{ $colspan }}")
+                    |<?php foreach ($rowValue['text'] as $rowKey => $rowText) { ?>
+                    |<?php if(!is_numeric($rowKey)) { ?>
+                    div(class="{{ $rowKey }}").no-data
+                        | <?= $rowText; ?>
+                    |<?php } else { ?>
+                    div(class="{{ $rowText }}")
+                        |<?php $dataKey = $rowText; ?>
+                        |<?php
+                        |   $itemPath = "detailItems.detailMainItem";
+                        |   switch($dataKey) {
+                        |   case $searchManager::BK_DATA_TRAFFIC:
+                        |       $itemPath = "detailItems.detailMainTraffic";
+                        |       break;
+                        |   }
+                        |?>
+                        |@include ($itemPath, [$searchManager, $detailData, $dataKey, $limit])
+                    |<?php } ?>
+                    |<?php } ?>
+                |<?php } ?>
+            |<?php } ?>
+            |<?php if('initial' == $key) { ?>
+            tr
+                td.bg-trans(colspan="6")
+                    div.inner
+                        div.whole
+                            div.viewNarrow.text-center.switch
+                                span.btn.btn-info.detailhide.toggle(toggle-class="etcetera")
+            |<?php } ?>
+        |<?php } ?>
+script(type="text/javascript", src!="/js/njc/simpleAccordion.js?_={{ date('Ymdhis') }}")

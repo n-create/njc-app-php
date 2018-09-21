@@ -1,0 +1,16 @@
+FROM debian:jessie
+
+RUN apt-get update -y && apt-get install -y npm
+RUN apt-get install -y curl git
+RUN curl -sL https://deb.nodesource.com/setup | bash --
+RUN apt-get install -y nodejs
+CMD npm update -g npm
+CMD npm cache clean --force
+RUN npm install -g n && n stable
+RUN apt-get purge -y nodejs npm
+
+WORKDIR /var/www/html
+
+ENTRYPOINT ["npm"]
+CMD ["-h"]
+

@@ -1,0 +1,42 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $keyData = $searchManager::$convertKey[$key];
+|   $master['search'] = $searchManager->checkAndSetBlankAreaName($master['search']);
+|   $master['search'] = $searchManager->convertAreaData($master['search']);
+|?>
+div.schoolParent(class!="parent_{{ $rKey }}")
+    |<?php foreach($master['search'] as $dataKey => $data) { ?>
+    .head
+        h4
+            label
+                span
+                    | {{ $data[$keyData['keyText']] }}
+    |<?php foreach($data[$keyData['keyGroup']] as $choHead => $choData) { ?>
+    .h5
+        |<?php
+        |   if('その他' != $choHead) {
+        |       $choHead .= "行";
+        |   }
+        |?>
+        |{{ $choHead }}
+    ul.clearfix(class!="main_{{ $rKey }}")
+        |<?php foreach($choData as $list) { ?>
+        |<?php
+        |   $text = $list[$keyData['keyGroupText']];
+        |   $value = $list[$keyData['keyGroupValue']];
+        |   if(isset($list['count'])) {
+        |       $text .= "(" . $list['count'] . "件)";
+        |   }
+        |?>
+        li(class!="sub_{{ $rKey }}").col-sm-4
+            label.form-control
+                input.checksubmit(type!='checkbox', name!='{{ $rKey }}[]', class!="child_{{ $rKey }}", value!="{{ $value }}")
+                span
+                    |{{ $text }}
+        |<?php } ?>
+    |<?php } ?>
+    |<?php } ?>

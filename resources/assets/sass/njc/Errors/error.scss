@@ -1,0 +1,43 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+* {
+    font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN-W3", "HiraKakuProN-W3", sans-serif;
+}
+$boxWidth: 570;
+$halfBoxWidth: $boxWidth / 2;
+.error-wrap {
+    padding: 5px;
+    background-color: #EEE;
+    width: #{$boxWidth}px;
+    margin: 0 auto;
+    &.mode-404 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        margin-left: -#{$halfBoxWidth}px;
+    }
+    p {
+        margin: 0 0 15px;
+    }
+    .error-content-wrap {
+        padding: 40px 70px;
+        background-color: #F8F8F8;
+        border: 1px solid #FFF;
+        .h2 {
+            margin: 0 0 20px 0;
+        }
+        .link-contents {
+            p {
+                display: inline-block;
+                margin: 0 35px 0 0;
+            }
+        }
+    }
+}
+table.cake-sql-log {
+    border: 1px solid #BBB;
+    th, td {
+        border: 1px solid #BBB;
+    }
+}

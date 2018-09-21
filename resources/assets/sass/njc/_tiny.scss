@@ -1,0 +1,438 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+.container {
+    font-size: .9rem;
+}
+
+.targetNumber,
+.bk-count {
+    text-align: center;
+}
+div:not(.mapSideSearch) {
+    .searchBox {
+        .searchBoxInner {
+            .h5 {
+                margin-bottom: 15px;
+            }
+            .inner {
+                ul {
+                    li {
+                        &:not(.sub_ensen){
+                            min-width: 50%;
+                        }
+                        &.sub_ensen {
+                            width: 100%;
+                        }
+                    }
+                }
+                select {
+                    &:not(.et):not(.sck) {
+                        width: 45%;
+                    }
+                    &.sck {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 物件一覧 */
+.bk-result-header {
+    .header-title {
+        nav {
+            .nav {
+                .nav-item {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+}
+.bk-result-page-wrapper {
+    .bk-list-header {
+        .list-header-child {
+            padding: .5rem;
+            .bk-list-sort {
+                margin-top: .1rem;
+                select {
+                    width: 49%;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+/* 物件詳細 */
+.bk-detail-body {
+    .bk-detail-main {
+        .bk-detail-table-wrap {
+            .main-detail-box {
+                &.initial {
+                    .bg-trans {
+                        -webkit-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            table {
+                border-bottom: none;
+                tr {
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    th {
+                        -webkit-flex: 0 0 40%;
+                        flex: 0 0 40%;
+                        max-width: 40%;
+                    }
+                    td {
+                        -webkit-flex: 0 0 60%;
+                        flex: 0 0 60%;
+                        max-width: 60%;
+                    }
+                    th,
+                    td {
+                        font-size: .9rem;
+                        border: {
+                            top: none;
+                            left:none;
+                            right: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bk-detail-map {
+        ul.syuuhen-info {
+            margin: {
+                left: -5px;
+                right: -5px;
+            }
+            li {
+                width: 50%;
+                padding: {
+                    right: 5px;
+                    left: 5px;
+                }
+                label {
+                    img {
+                        width: 20px;
+                    }
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    .bk-detail-comments {
+        .prcnt {
+            .prcnt_title {
+                &:before {
+                    margin-bottom: .5rem;
+                    padding: 2px 10px;
+                    display: block;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
+
+/* 賃貸・売買別カラー設定 */
+.searchBox {
+    &.rent {
+        .targetNumber {
+            .normal {
+                background-color: rgba(red($rent_main_bg_color), green($rent_main_bg_color), blue($rent_main_bg_color), 0.1);
+            }
+        }
+    }
+    &.sale {
+        .targetNumber {
+            .normal {
+                background-color: rgba(red($sale_main_bg_color), green($sale_main_bg_color), blue($sale_main_bg_color), 0.1);
+            }
+        }
+    }
+}
+
+.pc-view {
+    display: none;
+}
+
+#map_canvas {
+    #njcBukkenView {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        .mapBkList {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            overflow: hidden;
+            border: none;
+            border-radius: unset;
+            padding-bottom: 40px;
+            background-color: #eeeeee;
+            &.noDotsSlider {
+                padding-bottom: 0px;
+            }
+            .header,
+            .njcSliderClose {
+                border-radius: unset;
+            }
+            #bkTinyList {
+                height: auto;
+                position: static;
+                background-color: #ffffff;
+                margin: 0;
+                .slick-list {
+                    width: 100%;
+                    height: auto;
+                    min-height: 139px;
+                    background-color: white;
+                }
+                .slick-dots {
+                    width: calc(100% - (70px * 2));
+                    left: 70px;
+                    bottom: 11px;
+                    li {
+                        width: 100%;
+                        &[aria-hidden="true"] {
+                            display: none;
+                        }
+                    }
+                }
+                .slick-prev,
+                .slick-next {
+                    z-index: 1;
+                    &:before {
+                        color: #000000;
+                        font-size: 30px;
+                    }
+                }
+                .slick-prev {
+                    left: 0;
+                }
+                .slick-next {
+                    right: 12px;
+                }
+            }
+        }
+    }
+}
+.mapMainPanel {
+    flex-direction: column;
+    .mapSideSearch {
+        max-width: none;
+        width: 100%;
+        .searchBox {
+            display: none;
+        }
+    }
+    .bkSearchMap {
+        #map_canvas {
+            height: calc(100% - 89px);
+            #njcBukkenView {
+                .mapBkList {
+                    .mapBkItem {
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}
+//
+//周辺環境
+//
+.surroundings {
+    .surroundings-list-wrap {
+        padding: 10px 10px 60px 10px;
+        .surroundings-list {
+            &.all-view {
+                .surroundings-contents {
+                    width: calc(50% - 10px);
+                    vertical-align: top;
+                    display: inline-block;
+                    margin: 5px;
+                }
+            }
+            .slick-arrow {
+                width: 40px;
+                height: 40px !important;
+                border-radius: 4px;
+                top: auto;
+                bottom: -70px;
+                &:before {
+                    content: '\e001';
+                    font-family: 'public-icomoon';
+                    line-height: 40px;
+                    color: #FFF;
+                    display: inline-block;
+                }
+                &.slick-next {
+                    right: 5px
+                }
+                &.slick-prev {
+                    left: 5px;
+                    &:before {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+    .change-all-view-btn {
+        &.bk-count-2,
+        &.bk-count-1 {
+            display: none;
+        }
+    }
+}
+#cboxLoadedContent {
+    .surroundings-contents-pop {
+        position: relative;
+        .surrounding-image-pop {
+            &:before {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: "";
+                width: 100%;
+                height: 50px;
+                background: linear-gradient(to bottom, #333333 0%, transparent 88%);
+            }
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+        .surrounding-message {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            font-size: 12px;
+            padding: 10px;
+            line-height: 1.3;
+            .surrounding-name,
+            .surrounding-range {
+                display: inline;
+            }
+        }
+    }
+}
+#colorbox,
+#cboxWrapper,
+#cboxMiddleLeft,
+#cboxContent,
+#cboxLoadedContent {
+    max-width: 320px !important;
+}
+
+/* クイック検索 */
+.quicksearch {
+    .quickSearchRent,
+    .quickSearchSale {
+        .searchBoxInner {
+            .row {
+                > div {
+                    ul {
+                        li {
+                            float: left;
+                            padding: 0 5px;
+                            min-width: 50%;
+                        }
+                    }
+                    select {
+                        margin-bottom: .5rem;
+                    }
+                    .afterSelectText {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.mediaKomoku {
+    .mediaLinkBoxs {
+        .theta-open-wrap,
+        .movie-disp-wrap {
+            display: table;
+            width: 100%;
+            background-color: #F8F8F8;
+            border-bottom: 1px solid #E7E7E7;
+            padding: 10px;
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .theta-open-wrap {
+            span {
+                &.control-img-sp {
+                    width: 40px;
+                    height: 30px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    background-image: url(/images/theta.png);
+                }
+            }
+        }
+        .movie-disp-wrap {
+            span {
+                &.control-img-sp {
+                    width: 40px;
+                    height: 30px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    background-image: url(/images/movie.png);
+                }
+            }
+        }
+        .youtubePlayerWrap {
+            position: relative;
+            iframe {
+                &.youtubePlayer {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 56.25%;
+            }
+        }
+        .theta-select {
+            padding: 1rem;
+            .btn-theta {
+                width: 49%;
+                display: inline-block;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

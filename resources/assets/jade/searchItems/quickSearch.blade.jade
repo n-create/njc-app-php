@@ -1,0 +1,45 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $dispMaster = [
+|       RS_STR_RENT => [
+|           $searchManager::BK_DATA_BILDTYPE,
+|           $searchManager::BK_DATA_MONEY,
+|           $searchManager::BK_DATA_MONEY_ETC,
+|           $searchManager::BK_DATA_NEWBILD,
+|           $searchManager::BK_DATA_FREEWORD,
+|       ],
+|       RS_STR_SALE => [
+|           $searchManager::BK_DATA_BILDTYPE,
+|           $searchManager::BK_DATA_MONEY,
+|           $searchManager::BK_DATA_NEWBILD,
+|           $searchManager::BK_DATA_FREEWORD,
+|       ],
+|   ];
+|   $defaultView = RS_STR_RENT;
+|?>
+.quicksearch
+    div.row
+        div.col-md-12
+            h2.heading.quickSearchHeading.h2(title="クイック検索", data-subtitle="QUICK SEARCH").mb-3 クイック検索
+    ul.nav.nav-tabs.nav-fill.mb-4
+        li.nav-item
+            a.nav-link.active.show#rent-tab(data-toggle="tab", href="#rent", role="tab", aria-controls="rent", aria-selected="true") 賃貸
+        li.nav-item
+            a.nav-link#sale-tab(data-toggle="tab", href="#sale", role="tab", aria-controls="sale", aria-selected="true") 売買
+    div.tab-content
+        |<?php foreach(BK_TYPE as $rentSaleStr => $rentSale) { ?>
+        |<?php $isActive = ($rentSaleStr == $defaultView); ?>
+        div.tab-pane(role="tabpanel", aria-labelledby="home-tab", id!="{{ $rentSaleStr }}", class!="{{ (($isActive) ? 'show active' : '') }}")
+            div.row
+                div.col-md-12
+                    form.quickSearchCondition(action="/{{ $rentSaleStr }}/result")
+                        div(class="quickSearch{{ ucfirst($rentSaleStr) }}")
+                            |<?php $dispSearch = $dispMaster[$rentSaleStr]; ?>
+                            |@include ('searchItems.indexSearchBox', [$searchManager, $dispSearch, $rentSaleStr])
+                        div.text-center
+                            button.btn この条件で検索
+        |<?php } ?>

@@ -1,0 +1,22 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $groupingData = $searchManager->convertGroupingData($master['search']);
+|?>
+|<?php foreach($groupingData as $parentKey => $parentData) { ?>
+dl.parent.clearfix(class!="{{ $rKey }}")
+    dt
+        |{{ $parentData['name'] }}
+    dd
+        ul.main(class!="{{ $rKey }}")
+            |<?php foreach($parentData['child'] as $childKey => $text) { ?>
+            li.sub(class!="{{ $rKey }}")
+                label.form-control
+                    input.child(type!='checkbox', name!='{{ $rKey }}[{{ $parentKey }}][]', class!="{{ $rKey }}", value!="{{ $parentKey }}_{{ $childKey }}")
+                    span
+                        |{{ $text }}
+            |<?php } ?>
+|<?php } ?>

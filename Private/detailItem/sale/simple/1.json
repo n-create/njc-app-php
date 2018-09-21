@@ -1,0 +1,26 @@
+[
+  {
+    "name": "価格",
+    "text": [
+      "money"
+    ]
+  },
+  {
+    "name": "坪単価",
+    "text": [
+      "tubo_tanka"
+    ]
+  },
+  {
+    "name": "土地面積",
+    "text": [
+      "land_area_size"
+    ]
+  },
+  {
+    "name": "物件種別",
+    "text": [
+      "building_type"
+    ]
+  }
+]

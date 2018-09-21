@@ -1,0 +1,47 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+div.parts
+    .h3.mb-3
+        | 町域を選択してください。
+    div.clearfix
+        |<?php
+        |   $searchManager = new App\Services\Helper\SearchItemHelper();
+        |   $areaData = $searchManager->getMapAreaData(RS_STR_SALE);
+        |   $areaData = $searchManager->checkAndSetBlankAreaName($areaData);
+        |   $areaData = $searchManager->convertAreaData($areaData);
+        |   $keyData = $searchManager::$convertKey[$searchManager::BK_DATA_AREA];
+        |?>
+        #mapListDialog
+            |<?php foreach($areaData as $data) { ?>
+            .h5
+                span.clickable.mapDialogKenSi
+                    | {{ $data[$keyData['keyText']] }}({{ $searchManager->getTotalCountArea($data['towns']) }})
+            ul.areaList
+                |<?php foreach($data[$keyData['keyGroup']] as $choHead => $areaChild) { ?>
+                li.mapChoHead.mt-2
+                    | {{ $choHead.(1 === mb_strlen($choHead) ? '行' : '') }}
+                |<?php foreach($areaChild as $area) { ?>
+                |<?php
+                |   $id = $area[$keyData['keyGroupText']];
+                |   $text = $area[$keyData['keyGroupText']];
+                |   if (empty($text)) {
+                |       $id = $data['keyText'];
+                |       $text = '未分類';
+                |   }
+                |   $value = $area[$keyData['keyGroupValue']];
+                |   if (8 < strlen($value)) {
+                |       $value = substr($value, 0, 8);
+                |   }
+                |   if(isset($area['count'])) {
+                |       $text .= "(" . $area['count'] . "件)";
+                |   }
+                |?>
+                li.njcAreaListAjax(id!="{{ $id }}", data-postal-code!="{{ $value }}")
+                    span.clickable
+                        | {{ $text }}
+                |<?php } ?>
+                |<?php } ?>
+            |<?php } ?>

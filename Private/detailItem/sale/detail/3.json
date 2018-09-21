@@ -1,0 +1,303 @@
+{
+  "initial": [
+    {
+      "name": "その他費用",
+      "cols": 1,
+      "text": [
+        "etc_hiyo"
+      ]
+    },
+    {
+      "name": "仲介手数料",
+      "cols": 2,
+      "text": [
+        "cyukai_ryokin"
+      ]
+    },
+    {
+      "name": "借地料",
+      "cols": 1,
+      "text": [
+        "syakuchi_ryokin"
+      ]
+    },
+    {
+      "name": "借地契約期間",
+      "cols": 1,
+      "text": [
+        "syakuchi_keiyaku"
+      ]
+    },
+    {
+      "name": "借地内容",
+      "cols": 1,
+      "text": [
+        "syakuchi_naiyo"
+      ]
+    },
+    {
+      "name": "建物面積",
+      "cols": 1,
+      "text": [
+        "building_area_size"
+      ]
+    },
+    {
+      "name": "建築面積",
+      "cols": 2,
+      "text": [
+        "construction_area_size"
+      ]
+    },
+    {
+      "name": "専有面積",
+      "cols": 1,
+      "text": [
+        "area_size"
+      ]
+    },
+    {
+      "name": "バルコニー面積",
+      "cols": 2,
+      "text": [
+        "balcony_area_size"
+      ]
+    },
+    {
+      "name": "向き",
+      "cols": 1,
+      "text": [
+        "muki"
+      ]
+    },
+    {
+      "name": "建物構造",
+      "cols": 2,
+      "text": [
+        "structure_type"
+      ]
+    },
+    {
+      "name": "建物階数",
+      "cols": 1,
+      "text": [
+        "building_floor",
+        "building_underground"
+      ]
+    },
+    {
+      "name": "所在階数",
+      "cols": 2,
+      "text": [
+        "building_current"
+      ]
+    },
+    {
+      "name": "総戸数",
+      "cols": 1,
+      "text": [
+        "kosu"
+      ]
+    },
+    {
+      "name": "販売戸数",
+      "cols": 2,
+      "text": [
+        "hanbai_kosu"
+      ]
+    },
+    {
+      "name": "都市計画",
+      "cols": 1,
+      "text": [
+        "city_planning"
+      ]
+    },
+    {
+      "name": "用途地域",
+      "cols": 2,
+      "text": [
+        "youto_region"
+      ]
+    },
+    {
+      "name": "取引態様",
+      "cols": 1,
+      "text": [
+        "torihiki_taiyo"
+      ]
+    },
+    {
+      "name": "契約条件",
+      "cols": 2,
+      "text": [
+        "jyoken_options"
+      ]
+    },
+    {
+      "name": "現況",
+      "cols": 1,
+      "text": [
+        "state"
+      ]
+    },
+    {
+      "name": "引渡時期",
+      "cols": 1,
+      "text": [
+        "nyukyo"
+      ]
+    },
+    {
+      "name": "引渡条件",
+      "cols": 1,
+      "text": [
+        "hikiwatashi_jyoken"
+      ]
+    },
+    {
+      "name": "情報更新日",
+      "cols": 1,
+      "text": [
+        "updated_at"
+      ]
+    },
+    {
+      "name": "掲載期限日",
+      "cols": 2,
+      "text": [
+        "open_at"
+      ]
+    }
+  ],
+  "etcetera": [
+    {
+      "name": "設備",
+      "cols": 3,
+      "text": [
+        "setubi_options"
+      ]
+    },
+    {
+      "name": "小学校区",
+      "cols": 1,
+      "text": [
+        "syogaku_name",
+        "syogaku_kyori"
+      ]
+    },
+    {
+      "name": "中学校区",
+      "cols": 2,
+      "text": [
+        "cyugaku_name",
+        "cyugaku_kyori"
+      ]
+    },
+    {
+      "name": "周辺環境",
+      "cols": 3,
+      "text": [
+        "around"
+      ]
+    },
+    {
+      "name": "駐車場",
+      "cols": 1,
+      "text": [
+        "parking_type"
+      ]
+    },
+    {
+      "name": "駐車料",
+      "cols": 1,
+      "text": [
+        "parking_ryokin"
+      ]
+    },
+    {
+      "name": "駐車台数",
+      "cols": 1,
+      "text": [
+        "parking_daisu"
+      ]
+    },
+    {
+      "name": "駐輪台数",
+      "cols": 1,
+      "text": [
+        "bicycle_parking_daisu"
+      ]
+    },
+    {
+      "name": "駐車場備考",
+      "cols": 2,
+      "text": [
+        "parking_biko"
+      ]
+    },
+    {
+      "name": "管理人",
+      "cols": 1,
+      "text": [
+        "building_manager"
+      ]
+    },
+    {
+      "name": "管理会社",
+      "cols": 2,
+      "text": [
+        "building_company"
+      ]
+    },
+    {
+      "name": "管理形態",
+      "cols": 1,
+      "text": [
+        "building_keitai"
+      ]
+    },
+    {
+      "name": "管理組合",
+      "cols": 2,
+      "text": [
+        "building_kumiai"
+      ]
+    },
+    {
+      "name": "現況利回り",
+      "cols": 1,
+      "text": [
+        "genko_yield"
+      ]
+    },
+    {
+      "name": "満室時利回り",
+      "cols": 2,
+      "text": [
+        "manshitsu_yield"
+      ]
+    },
+    {
+      "name": "建築確認番号",
+      "cols": 3,
+      "text": [
+        "building_check_code"
+      ]
+    },
+    {
+      "name": "特記事項",
+      "cols": 3,
+      "text": [
+        "tokki"
+      ]
+    },
+    {
+      "name": "備考",
+      "cols": 3,
+      "text": [
+        "biko"
+      ]
+    }
+  ]
+}

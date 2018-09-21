@@ -1,0 +1,308 @@
+/**
+ * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+ */
+.searchBox {
+    .targetNumber {
+        text-align: right;
+    }
+    .searchBoxInner {
+        .h5 {
+            padding: 0 10px;
+        }
+    }
+}
+#bkSearch,
+#bkSearchCheck {
+    .searchBox {
+        .searchBoxInner {
+            .inner {
+                ul {
+                    li {
+                        &:not(.sub_ensen){
+                            min-width: 25%;
+                        }
+                        &.sub_ensen {
+                            min-width: 33.3%;
+                        }
+                    }
+                }
+                select{
+                    &:not(.et):not(.sck) {
+                        width: 25%;
+                    }
+                    &.et,&.sck {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 物件一覧 */
+.bk-result-page-wrapper {
+    .bk-list-header {
+        .list-header-child {
+            padding: 1rem;
+        }
+    }
+}
+/* 物件詳細 */
+.bk-detail-header {
+    .bk-detail-top-data {
+        .detail-btn-set-area {
+            text-align: right;
+        }
+    }
+}
+.bk-detail-body {
+    .bk-detail-main {
+        .bk-detail-table-wrap {
+            .main-detail-box {
+                th {
+                    width: 15%;
+                }
+                td {
+                    width: 18%;
+                }
+            }
+        }
+    }
+    .bk-detail-comments {
+        .prcnt {
+            overflow: hidden;
+            .prcnt_title {
+                &:before {
+                    width: 70px;
+                    height: 70px;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 70px;
+                    display: inline-block;
+                }
+            }
+            .prcnt_box {
+                width: calc(100% - 75px);
+                padding: 10px;
+            }
+            .prcnt_title,
+            .prcnt_box {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.sp-view {
+    display: none;
+}
+
+.mapMainPanel {
+    .mapSideSearch {
+        position: relative;
+        max-width: 320px;
+        height: calc(100vh - 56px);
+        .content {
+            height: calc(100% - 89px);
+            overflow-y: scroll;
+        }
+    }
+    .bkSearchMap {
+        width: calc(100% - 320px);
+        #map_canvas {
+            height: calc(100vh - 56px);
+            #njcBukkenView {
+                .mapBkList {
+                    .mapBkItem {
+                        &:not(:last-child){
+                            border-bottom: 1px solid #e7e7e7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#map_canvas {
+    #njcBukkenView {
+        width: 274px;
+        right: 10px;
+        top: 80px;
+        z-index: 1;
+        .overflow {
+            height: 300px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    }
+}
+
+//
+//周辺環境
+//
+.surroundings {
+    .h4 {
+        border-radius: 4px 4px 0 0;
+    }
+    .surroundings-list-wrap {
+        padding: 20px 70px;
+        border-radius: 0 0 4px 4px;
+        .surroundings-list {
+            &.all-view {
+                .surroundings-contents {
+                    width: calc(20% - 10px);
+                    vertical-align: top;
+                    display: inline-block;
+                    margin: 5px;
+                }
+            }
+            .slick-arrow {
+                width: 40px;
+                height: 40px !important;
+                border-radius: 50%;
+                z-index: 1;
+                &:before {
+                    content: "";
+                }
+                &.slick-next {
+                    right: -50px;
+                }
+                &.slick-prev {
+                    left: -50px;
+                }
+            }
+        }
+    }
+    .change-all-view-btn {
+        &.bk-count-5,
+        &.bk-count-4,
+        &.bk-count-3,
+        &.bk-count-2,
+        &.bk-count-1 {
+            display: none;
+        }
+    }
+}
+.surroundings-summary-wrap {
+    ul {
+        overflow: hidden;
+        clear: both;
+        li {
+            display: inline-block;
+            min-width: 50%;
+            float: left;
+            .surrounding-name {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+#cboxLoadedContent {
+    padding: 10px;
+    .surroundings-contents-pop {
+        .surrounding-image-pop {
+            .image-wrap {
+                position: relative;
+                width: 100%;
+                padding-top: 75%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+        .surrounding-message {
+            max-width: 640px;
+            padding: 10px 30px 0 0;
+            font-size: .9rem;
+            .surrounding-name,
+            .surrounding-range {
+                display: inline;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+#cboxContent {
+    margin: 0 50px 20px;
+    #cboxCurrent {
+        top: auto;
+        right: 0;
+        left: 0;
+        float: unset;
+        text-align: center;
+    }
+    #cboxPrevious {
+        left: -50px;
+    }
+    #cboxNext {
+        right: -50px;
+    }
+}
+
+/* クイック検索 */
+.quicksearch {
+    .quickSearchRent,
+    .quickSearchSale {
+        .searchBoxInner {
+            .row {
+                > div {
+                    ul {
+                        li {
+                            float: left;
+                            padding: 0 5px;
+                            min-width: 25%;
+                        }
+                    }
+                    select {
+                        width: 25%;
+                    }
+                    .afterSelectText {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mediaKomoku {
+    .mediaLinkBoxs,
+    .thetaLinkBoxs {
+        padding: 30px;
+        border-radius: 4px;
+        iframe {
+            &.youtubePlayer {
+                width: 640px;
+                height: 360px;
+            }
+        }
+        .mediaLinkComment {
+            display: inline-block;
+            width: 640px;
+            text-align: left;
+        }
+        .thetaPlayerWrap {
+            float: left;
+            width: 80%;
+        }
+        .theta-select {
+            float: left;
+            width: 20%;
+            padding-left: 30px;
+            .btn-theta {
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

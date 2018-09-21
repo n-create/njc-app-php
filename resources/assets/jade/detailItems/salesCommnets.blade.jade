@@ -1,0 +1,18 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php if(!empty($detailData[$searchManager::BK_DATA_SELLING_PT1]) || !empty($detailData[$searchManager::BK_DATA_SELLING_PT2])) { ?>
+div.prcnt
+    div.prcnt_title
+    div.prcnt_box
+        |<?php if(!empty($detailData['selling_point_1'])) { ?>
+        div.selling_point_1
+            |{{ $detailData['selling_point_1'] }}
+        |<?php } ?>
+        |<?php if(!empty($detailData['selling_point_2'])) { ?>
+        div.selling_point_2
+            |{{ $detailData['selling_point_2'] }}
+        |<?php } ?>
+|<?php } ?>

@@ -1,0 +1,8 @@
+/.env
+/.sass-cache
+/package-lock.json
+/gulp.sh
+/vendor/
+/typings/
+/node_modules/
+/storage/framework/sessions/*

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "価格",
+    "text": [
+      "money"
+    ]
+  },
+  {
+    "name": "土地面積",
+    "text": [
+      "land_area_size"
+    ]
+  },
+  {
+    "name": "建物面積",
+    "text": [
+      "building_area_size"
+    ]
+  },
+  {
+    "name": "物件種別",
+    "text": [
+      "building_type"
+    ]
+  },
+  {
+    "name": "築年月",
+    "text": [
+      "building_year"
+    ]
+  }
+]

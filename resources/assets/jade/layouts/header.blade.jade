@@ -1,0 +1,27 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+div.inner-header-contents-wrap.content1
+    div#header-contents-wrap
+        div.bg-dark
+            .container
+                nav.navbar.navbar-expand-lg.navbar.navbar-dark.row
+                    a.navbar-brand(href="/") ○○不動産
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    div.collapse.navbar-collapse(id="navbarSupportedContent").justify-content-around
+                        ul.nav.navbar-nav
+                            li.nav-item
+                                a.nav-link(href="/") ホーム
+                        |<?php foreach(BK_TYPE as $rentSaleStr => $rentSale) { ?>
+                        ul.nav.navbar-nav
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle(data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
+                                    | {{ ((RS_STR_RENT == $rentSaleStr) ? '賃貸' : '売買') }}物件検索
+                                div.dropdown-menu
+                                    |<?php foreach(SEARCH_METHOD as $key => $text) { ?>
+                                    a.dropdown-item(href="/{{ $rentSaleStr }}/{{ $key }}") {{ $text }}
+                                    |<?php } ?>
+                        |<?php } ?>

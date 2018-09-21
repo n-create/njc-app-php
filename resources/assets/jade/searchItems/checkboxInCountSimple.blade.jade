@@ -1,0 +1,17 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php
+|   $text = $data[$keyData['keyText']];
+|   $value = $data[$keyData['keyValue']];
+|   if(isset($data['count'])) {
+|       $text .= "(" . $data['count'] . "件)";
+|   }
+|?>
+li(class!="sub_{{ $rKey }}")
+    label.form-control
+        input.checksubmit(type!='checkbox', name!='{{ $rKey }}[]', class!="child_{{ $rKey }}", value!="{{ $value }}")
+        span
+            |{{ $text }}

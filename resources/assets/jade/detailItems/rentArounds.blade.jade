@@ -1,0 +1,89 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php $arounds = $searchManager->getAroundsData($detailData, true); ?>
+|<?php if (!empty($arounds)) { ?>
+|<?php $count = count($arounds); ?>
+div.surroundings
+    div.h4.heading.bg-dark.text-light.mb-0 周辺施設（{{ $count }}枚）
+    div.btn.btn-light.btn-sm.change-all-view-btn.open-surroundings(class!="img-count-{{ $count }}") 全て見る
+    div.surroundings-list-wrap.bg-light.loading
+        div.surroundings-list(id!='surroundings_custom')
+            |<?php foreach ($arounds as $key => $data) { ?>
+            div.surroundings-contents(data-number!="{{ $key }}")
+                div.surrounding-image
+                    div.image-wrap
+                        img(src!="{{ $data['image_path']['large'] }}")
+                div.surrounding-message
+                    div.surrounding-name
+                        |{{ $data['name'] }}
+                    |<?php if (!empty($data['kyori'])) { ?>
+                    div.surrounding-range
+                        |{{ $data['kyori'] }}m
+                    |<?php } ?>
+            |<?php } ?>
+    div.surroundings-pop-wrap(style='display:none;')
+        |<?php foreach ($arounds as $key => $data) { ?>
+        a(href!='#surroundings-contents-custom-{{ $key }}')
+        |<?php } ?>
+        |<?php foreach ($arounds as $key => $data) { ?>
+        div.surroundings-contents-pop(id!='surroundings-contents-custom-{{ $key }}')
+            div.surrounding-image-pop
+                div.image-wrap
+                    img(src!="{{ $data['image_path']['large'] }}")
+            div.surrounding-message
+                div.surrounding-name
+                    |{{ $data['name'] }}
+                |<?php if (!empty($data['kyori'])) { ?>
+                div.surrounding-range
+                    |{{ $data['kyori'] }}m
+                |<?php } ?>
+        |<?php } ?>
+|<?php
+|   $script_files = [
+|       '/js/components/slick/slick.js',
+|       '/js/components/colorbox/jquery.colorbox-min.js',
+|       '/js/njc/surroundings.js',
+|   ];
+|?>
+|<?php foreach($script_files as $filePath) { ?>
+script(type="text/javascript", src!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+|<?php
+|   $css_files = [
+|       '/js/components/slick/slick.css',
+|       '/js/components/slick/slick-theme.css',
+|       '/css/components/colorbox/example3/colorbox.css',
+|       '/css/njc/colorbox-custom.css'
+|   ];
+|?>
+|<?php foreach($css_files as $filePath) { ?>
+link(rel="stylesheet", type="text/css", href!="{{ $filePath }}?_={{ date('Ymdhis') }}")
+|<?php } ?>
+script
+    |$(function(){
+    |    function surroundingTimeout () {
+    |        if ('NJC' in window && window.NJC.surroundingSlick && $ && 'colorbox' in $ && 'slick' in $()) {
+    |            window.NJC.surroundingSlick.ResStart("#surroundings_custom");
+    |        } else {
+    |            setTimeout(surroundingTimeout, 1000);
+    |        }
+    |    }
+    |    surroundingTimeout();
+    |});
+|<?php } ?>
+|<?php $aroundsText = $searchManager->getAroundsData($detailData, false); ?>
+|<?php if (!empty($aroundsText)) { ?>
+div
+    .surroundings-summary-wrap
+        ul.mb-0
+            |<?php foreach ($aroundsText as $key => $data) { ?>
+            li
+                span.surrounding-name
+                    |{{ $data['type']['value'] }} {{ $data['name'] }}まで
+                span.surrounding-range
+                    |{{ $data['kyori'] }}m
+            |<?php } ?>
+|<?php } ?>

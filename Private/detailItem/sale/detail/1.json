@@ -1,0 +1,198 @@
+{
+  "initial": [
+    {
+      "name": "その他費用",
+      "cols": 1,
+      "text": [
+        "etc_hiyo"
+      ]
+    },
+    {
+      "name": "仲介手数料",
+      "cols": 2,
+      "text": [
+        "cyukai_ryokin"
+      ]
+    },
+    {
+      "name": "土地権利",
+      "cols": 1,
+      "text": [
+        "tochi_kenri"
+      ]
+    },
+    {
+      "name": "地目",
+      "cols": 1,
+      "text": [
+        "land_category"
+      ]
+    },
+    {
+      "name": "地勢",
+      "cols": 1,
+      "text": [
+        "topography"
+      ]
+    },
+    {
+      "name": "建築条件",
+      "cols": 1,
+      "text": [
+        "kentiku_jyoken"
+      ]
+    },
+    {
+      "name": "建ぺい率",
+      "cols": 1,
+      "text": [
+        "kenpei"
+      ]
+    },
+    {
+      "name": "容積率",
+      "cols": 1,
+      "text": [
+        "yoseki"
+      ]
+    },
+    {
+      "name": "接道状況詳細",
+      "cols": 1,
+      "text": [
+        "connecting_road_detail"
+      ]
+    },
+    {
+      "name": "私道負担面積",
+      "cols": 1,
+      "text": [
+        "sido_men"
+      ]
+    },
+    {
+      "name": "セットバック",
+      "cols": 1,
+      "text": [
+        "setback",
+        "setback_ryo"
+      ]
+    },
+    {
+      "name": "都市計画",
+      "cols": 1,
+      "text": [
+        "city_planning"
+      ]
+    },
+    {
+      "name": "用途地域",
+      "cols": 2,
+      "text": [
+        "youto_region"
+      ]
+    },
+    {
+      "name": "国土法",
+      "cols": 1,
+      "text": [
+        "kokudo_hou"
+      ]
+    },
+    {
+      "name": "法令上の制限",
+      "cols": 2,
+      "text": [
+        "horei"
+      ]
+    },
+    {
+      "name": "取引態様",
+      "cols": 1,
+      "text": [
+        "torihiki_taiyo"
+      ]
+    },
+    {
+      "name": "契約条件",
+      "cols": 2,
+      "text": [
+        "jyoken_options"
+      ]
+    },
+    {
+      "name": "現況",
+      "cols": 1,
+      "text": [
+        "state"
+      ]
+    },
+    {
+      "name": "引渡時期",
+      "cols": 1,
+      "text": [
+        "nyukyo"
+      ]
+    },
+    {
+      "name": "引渡条件",
+      "cols": 1,
+      "text": [
+        "hikiwatashi_jyoken"
+      ]
+    },
+    {
+      "name": "情報更新日",
+      "cols": 1,
+      "text": [
+        "updated_at"
+      ]
+    },
+    {
+      "name": "掲載期限日",
+      "cols": 2,
+      "text": [
+        "open_at"
+      ]
+    }
+  ],
+  "etcetera": [
+    {
+      "name": "小学校区",
+      "cols": 1,
+      "text": [
+        "syogaku_name",
+        "syogaku_kyori"
+      ]
+    },
+    {
+      "name": "中学校区",
+      "cols": 2,
+      "text": [
+        "cyugaku_name",
+        "cyugaku_kyori"
+      ]
+    },
+    {
+      "name": "周辺環境",
+      "cols": 3,
+      "text": [
+        "around"
+      ]
+    },
+    {
+      "name": "特記事項",
+      "cols": 3,
+      "text": [
+        "tokki"
+      ]
+    },
+    {
+      "name": "備考",
+      "cols": 3,
+      "text": [
+        "biko"
+      ]
+    }
+  ]
+}

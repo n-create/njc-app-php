@@ -1,0 +1,17 @@
+|<?php
+|/**
+| * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+| */
+|?>
+|<?php foreach(app('request')->input() as $name => $inputData) { ?>
+|<?php if(is_array($inputData)) { ?>
+|<?php
+|   $temp = [];
+|   foreach($inputData as $data) {
+|       $temp[] = $data;
+|   }
+|   $inputData = implode(",", $temp);
+|?>
+|<?php } ?>
+input(type="hidden", name!="{{ $name }}", value!="{{ $inputData }}", class="param_{{$name}}") 
+|<?php } ?>
