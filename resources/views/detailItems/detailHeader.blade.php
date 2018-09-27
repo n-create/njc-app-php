@@ -54,9 +54,9 @@
                   $bkMoney .= $money['value'];
               }
               $bkMoneyName = (RS_STR_RENT === $rentSaleStr) ? '賃料' : '価格' ;
-              $mailText = "物件名：{$bkName}%0D%0A" .
-                          "住所：{$bkAddr}%0D%0A" .
-                          "{$bkMoneyName}：{$bkMoney}%0D%0A";
+              $mailText = "物件名：{$bkName}\r\n" .
+                          "住所：{$bkAddr}\r\n" .
+                          "{$bkMoneyName}：{$bkMoney}\r\n";
               $mailText = rawurlencode($mailText);
             ?>
             <button type="button" onclick="location.href='mailto:?subject=おすすめの物件&amp;body={{ $mailText }}{{ $nowUrl }}'" class="btn btn-info btn-sm sendarticle_m180 sendInfoMail">物件情報をメールで送る</button>

@@ -484,7 +484,7 @@ class SearchItemHelper extends MstBkSearch {
                     $param[] = "{$key}={$value}";
                 }
             }
-            $jsonData = (new JsonHelper())->getJsonDataNoDebug($url . "?" . implode("&", $param), true);
+            $jsonData = (new JsonHelper())->getJsonDataNoDebug($url . "&" . implode("&", $param), true);
         }
         return $jsonData;
     }

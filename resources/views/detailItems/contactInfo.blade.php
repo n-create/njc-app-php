@@ -8,7 +8,7 @@
   <div class="detail-contact-info-inner">
     <div class="info-title card-header">この物件のお問い合わせ</div>
     <div class="card-body">
-      <div class="info-message mb-2">お電話でお気軽にお問い合わせください。お電話でのお問い合わせの際は、「物件お問い合わせ番号」をお伝えいただけますとスムーズにご案内することができます。</div>
+      <div class="info-message mb-2">お電話でお気軽にお問い合わせください。「物件お問い合わせ番号」をお伝えいただけますとスムーズにご案内することができます。</div>
       <div class="row align-items-center">
         <div class="col-md-5">
           <div class="info-num p-3 bg-white text-center mb-sm-0 mb-2"><span class="info-num-title d-inline-block">物件お問い合わせNo.：</span><span class="info-num-conts d-inline-block mb-0 h4 text-danger">
