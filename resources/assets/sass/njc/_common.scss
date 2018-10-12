@@ -575,6 +575,35 @@ a, button, input[type="button"], .btn:not(.disabled) {
     }
 }
 
+/* 物件アイコン */
+ul.bk-icons {
+    margin-bottom: 5px;
+    .bk-icon {
+        width: 70px;
+        padding: 4px 0;
+    }
+}
+
+.bk-list-body {
+    ul.bk-icons {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        .bk-icon {
+            position: relative;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            > span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
 
 /* 物件詳細 */
 .bk-detail-header {

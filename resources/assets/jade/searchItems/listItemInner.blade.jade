@@ -8,6 +8,20 @@
 |<?php $isMatome = (RS_STR_RENT === $rentSaleStr) ? true : false; ?>
 .col-md-6.col-lg-4.mb-4
     .list-item-inner.card
+        .bk-detail-status-icons
+            ul.bk-icons
+                |<?php if($searchManager->isNewArrive($resultData)) { ?>
+                li.bk-icon.status-new.badge.badge-warning
+                    span.status-new-conts 新着
+                |<?php } ?>
+                |<?php if($searchManager->isNewUpdate($resultData)) { ?>
+                li.bk-icon.status-update.badge.badge-primary
+                    span.status-update-conts 更新
+                |<?php } ?>
+                |<?php if($searchManager->isNewBuild($resultData)) { ?>
+                li.bk-icon.status-building.badge.badge-success
+                    span.status-building-conts 新築
+                |<?php } ?>
         a.img.card-img-top(href="{{ $link }}", title="{{ $title }}", target="_blank")
             .listGazo.text-center
                 .GazoImg

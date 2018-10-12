@@ -9,8 +9,23 @@
 |?>
 .bk-detail-top-data.mb-3
     .bk-detail-top-title-area.mb-1
+        .bk-detail-status-icons
+            ul.bk-icons
+                |<?php if($searchManager->isNewArrive($detailData)) { ?>
+                li.bk-icon.status-new.badge.badge-warning
+                    span.status-new-conts 新着
+                |<?php } ?>
+                |<?php if($searchManager->isNewUpdate($detailData)) { ?>
+                li.bk-icon.status-update.badge.badge-primary
+                    span.status-update-conts 更新
+                |<?php } ?>
+                |<?php if($searchManager->isNewBuild($detailData)) { ?>
+                li.bk-icon.status-building.badge.badge-success
+                    span.status-building-conts 新築
+                |<?php } ?>
         .bk-detail-crui-name.badge.badge-dark.mr-1.mb-1
-            | {{ $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_BILDTYPE, null) }}
+            .bk-data-title
+                | {{ $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_BILDTYPE, null) }}
         h2.bk-detail-title.h4.mb-0
             |<?php
             |   $bkName = $searchManager->getAndCheckBkData($detailData, $searchManager::BK_DATA_NAME, null);
