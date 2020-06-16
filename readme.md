@@ -11,7 +11,7 @@
 ## 利用方法
 + .env.example を .env とリネームしてください。
 + 提供されたAPIキーを.env内のAPI_TOKEN_KEYに設定してください。
-+ 提供されたAPIドメインを.env内のAPI_DOMAINに設定してください。
++ 提供されたAPIドメイン（https://estate.njcapi.jp/api/v1/web）を.env内のAPI_DOMAINに設定してください。
 + 会社名称や電話番号の設定は、.env内の下記値に設定してください。
     + 会社名称 => COMPANY_NAME
     + 所在地 => COMPANY_ADDRESS
