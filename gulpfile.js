@@ -1,63 +1,71 @@
-const gulp          = require('gulp');
-const jade          = require('gulp-jade');
-const rename        = require('gulp-rename');
-const typescript    = require('gulp-typescript');
-const watch         = require('gulp-watch');
-const changed       = require('gulp-changed');
-const compass       = require('gulp-sass');
+const gulp = require("gulp");
+const jade = require("gulp-jade");
+const rename = require("gulp-rename");
+const typescript = require("gulp-typescript");
+const watch = require("gulp-watch");
+const changed = require("gulp-changed");
+const compass = require("gulp-sass");
 
-gulp.task('jade', () => {
-    gulp
-        .src(['./resources/assets/jade/**/*.jade'])
-        .pipe(changed('./resources/views/', {extension: '.php'}))
-        .pipe(jade({
-            pretty: true
-        }))
-        .pipe(rename({
-            extname: ".php"
-        }))
-        .pipe(gulp.dest('./resources/views/'))
-    ;
-});
-gulp.task('typescript', () => {
-    gulp
-        .src('./resources/assets/ts/**/*.ts')
-        .pipe(changed('./public/js/', {extension: '.js'}))
-        .pipe(typescript({
-            allowJs: true
-        }))
-        .pipe(gulp.dest('./public/js/'))
-    ;
+gulp.task("jade", () => {
+  gulp
+    .src(["./resources/assets/jade/**/*.jade"])
+    .pipe(changed("./resources/views/", { extension: ".php" }))
+    .pipe(
+      jade({
+        pretty: true,
+      })
+    )
+    .pipe(
+      rename({
+        extname: ".php",
+      })
+    )
+    .pipe(gulp.dest("./resources/views/"));
 });
 
-gulp.task('compass', () => {
-    gulp
-        .src('./resources/assets/sass/**/*.scss')
-        .pipe(
-            compass({
-                outputStyle: 'expanded',
-                sourceComments: true
-            }).on('error', compass.logError)
-        )
-        .pipe(gulp.dest('./public/css/'));
-    ;
+gulp.task("typescript", () => {
+  gulp
+    .src("./resources/assets/ts/**/*.ts")
+    .pipe(changed("./public/js/", { extension: ".js" }))
+    .pipe(
+      typescript({
+        allowJs: true,
+      })
+    )
+    .pipe(gulp.dest("./public/js/"));
 });
 
-gulp.task('watch', () => {
-    gulp.watch(['resources/assets/jade/**/*.jade'], ['jade']).on('change', (e)=>{console.log(e.path)});
-    gulp.watch(['resources/assets/ts/**/*.ts', 'typings/**/**.ts'], ['typescript'], (e)=>{console.log(e.path)});
-    gulp.watch(['resources/assets/sass/**/*.scss'], ['compass'], (e)=>{console.log(e.path)});
+gulp.task("compass", () => {
+  gulp
+    .src("./resources/assets/sass/**/*.scss")
+    .pipe(
+      compass({
+        outputStyle: "expanded",
+        sourceComments: true,
+      }).on("error", compass.logError)
+    )
+    .pipe(gulp.dest("./public/css/"));
 });
 
-gulp.task('default', [
-    'jade',
-    'typescript',
-    'compass',
-    'watch'
-]);
+gulp.task("watch", () => {
+  gulp.watch(["resources/assets/jade/**/*.jade"], gulp.series("jade"), (e) => {
+    console.log(e.path);
+  });
+  gulp.watch(
+    ["resources/assets/ts/**/*.ts", "typings/**/**.ts"],
+    gulp.series("typescript"),
+    (e) => {
+      console.log(e.path);
+    }
+  );
+  gulp.watch(
+    ["resources/assets/sass/**/*.scss"],
+    gulp.series("compass"),
+    (e) => {
+      console.log(e.path);
+    }
+  );
+});
 
-gulp.task('deploy', [
-    'jade',
-    'typescript',
-    'compass'
-]);
+gulp.task("default", gulp.parallel("jade", "typescript", "compass", "watch"));
+gulp.task("deploy", gulp.parallel("jade", "typescript", "compass"));
