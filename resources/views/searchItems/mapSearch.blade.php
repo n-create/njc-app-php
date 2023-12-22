@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <?php
   $mapSearchOption = [
@@ -79,7 +80,6 @@
       "/js/components/jquery/jquery-ui/jquery.ajaxDialog.js",
       GOOGLE_MAPS_API."?key=".env('GOOGLE_MAPS_KEY')."&libraries=places&language=ja",
       "/js/njc/map/mapSearch.js",
-      "/js/njc/map/mapGeocode.js",
       "/js/njc/map/markerClusterer.js",
   ];
 ?>

@@ -10,6 +10,7 @@
     "test": "tests"
   },
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/google.maps": "^3.54.10",
+    "@types/jquery": "^3.5.29",
+    "@types/jqueryui": "^1.12.21",
     "google-maps": "^3.3.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^3.2.0",
@@ -28,7 +32,7 @@
     "gulp-typescript": "^5.0.0-alpha.3",
     "gulp-watch": "^5.0.1",
     "node-sass": "^8.0",
-    "typescript": "^2.9.2"
-  },
-  "dependencies": {}
+    "sass": "^1.69.5",
+    "typescript": "^3.9.10"
+  }
 }

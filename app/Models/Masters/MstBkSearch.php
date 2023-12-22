@@ -1,10 +1,13 @@
 <?php
+
 /**
  * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
  */
+
 namespace App\Models\Masters;
 
-class MstBkSearch {
+class MstBkSearch
+{
     const MASTER_DATA_LOCAL = 'local';
     const API_DATA_BKSEARCH = 'bk_search';
     const API_DATA_NOARRAY = 'no_array';
@@ -346,35 +349,35 @@ class MstBkSearch {
             'type' => self::DATA_TYPE_LIST,
         ],
         self::BK_DATA_SI_SYOGAKU => [
-            'key'=> ['city_and_syogaku_names'],
+            'key' => ['city_and_syogaku_names'],
             'type' => self::DATA_TYPE_CHECK,
         ],
         self::BK_DATA_SI_CYUGAKU => [
-            'key'=> ['city_and_cyugaku_names'],
+            'key' => ['city_and_cyugaku_names'],
             'type' => self::DATA_TYPE_CHECK,
         ],
         self::BK_DATA_SYOGAKU_KYORI => [
-            'key'=> ['syogaku_kyori'],
+            'key' => ['syogaku_kyori'],
             'type' => self::DATA_TYPE_LIST,
         ],
         self::BK_DATA_CYUGAKU_KYORI => [
-            'key'=> ['cyugaku_kyori'],
+            'key' => ['cyugaku_kyori'],
             'type' => self::DATA_TYPE_LIST,
         ],
         self::BK_DATA_RAILWAY => [
-            'key'=> ['line_numbers'],
+            'key' => ['line_numbers'],
             'type' => self::DATA_TYPE_CHECK,
         ],
         self::BK_DATA_STATION => [
-            'key'=> ['station_numbers'],
+            'key' => ['station_numbers'],
             'type' => self::DATA_TYPE_CHECK,
         ],
         self::BK_DATA_CITY => [
-            'key'=> ['city_numbers'],
+            'key' => ['city_numbers'],
             'type' => self::DATA_TYPE_CHECK,
         ],
         self::BK_DATA_AREA => [
-            'key'=> ['post_codes'],
+            'key' => ['post_codes'],
             'type' => self::DATA_TYPE_CHECK,
         ],
     ];
@@ -754,46 +757,46 @@ class MstBkSearch {
     ];
 
     public static $menseki = [
-        10 =>'10㎡(3.02坪)',
-        15 =>'15㎡(4.53坪)',
-        20 =>'20㎡(6.05坪)',
-        25 =>'25㎡(7.56坪)',
-        30 =>'30㎡(9.07坪)',
-        35 =>'35㎡(10.58坪)',
-        40 =>'40㎡(12.1坪)',
-        45 =>'45㎡(13.61坪)',
-        50 =>'50㎡(15.12坪)',
-        60 =>'60㎡(18.15坪)',
-        70 =>'70㎡(21.17坪)',
-        80 =>'80㎡(24.2坪)',
-        90 =>'90㎡(27.22坪)',
-        100 =>'100㎡(30.25坪)',
-        110 =>'110㎡(33.27坪)',
-        120 =>'120㎡(36.3坪)',
-        130 =>'130㎡(39.32坪)',
-        140 =>'140㎡(42.35坪)',
-        150 =>'150㎡(45.37坪)',
-        160 =>'160㎡(48.4坪)',
-        170 =>'170㎡(51.42坪)',
-        180 =>'180㎡(54.45坪)',
-        190 =>'190㎡(57.47坪)',
-        200 =>'200㎡(60.5坪)',
-        250 =>'250㎡(75.62坪)',
-        300 =>'300㎡(90.75坪)',
-        350 =>'350㎡(105.87坪)',
-        400 =>'400㎡(121坪)',
-        450 =>'450㎡(136.12坪)',
-        500 =>'500㎡(151.25坪)',
-        550 =>'550㎡(166.37坪)',
-        600 =>'600㎡(181.5坪)',
-        650 =>'650㎡(196.62坪)',
-        700 =>'700㎡(211.75坪)',
-        750 =>'750㎡(226.87坪)',
-        800 =>'800㎡(242坪)',
-        850 =>'850㎡(257.12坪)',
-        900 =>'900㎡(272.25坪)',
-        950 =>'950㎡(287.37坪)',
-        1000 =>'1000㎡(302.5坪)'
+        10 => '10㎡(3.02坪)',
+        15 => '15㎡(4.53坪)',
+        20 => '20㎡(6.05坪)',
+        25 => '25㎡(7.56坪)',
+        30 => '30㎡(9.07坪)',
+        35 => '35㎡(10.58坪)',
+        40 => '40㎡(12.1坪)',
+        45 => '45㎡(13.61坪)',
+        50 => '50㎡(15.12坪)',
+        60 => '60㎡(18.15坪)',
+        70 => '70㎡(21.17坪)',
+        80 => '80㎡(24.2坪)',
+        90 => '90㎡(27.22坪)',
+        100 => '100㎡(30.25坪)',
+        110 => '110㎡(33.27坪)',
+        120 => '120㎡(36.3坪)',
+        130 => '130㎡(39.32坪)',
+        140 => '140㎡(42.35坪)',
+        150 => '150㎡(45.37坪)',
+        160 => '160㎡(48.4坪)',
+        170 => '170㎡(51.42坪)',
+        180 => '180㎡(54.45坪)',
+        190 => '190㎡(57.47坪)',
+        200 => '200㎡(60.5坪)',
+        250 => '250㎡(75.62坪)',
+        300 => '300㎡(90.75坪)',
+        350 => '350㎡(105.87坪)',
+        400 => '400㎡(121坪)',
+        450 => '450㎡(136.12坪)',
+        500 => '500㎡(151.25坪)',
+        550 => '550㎡(166.37坪)',
+        600 => '600㎡(181.5坪)',
+        650 => '650㎡(196.62坪)',
+        700 => '700㎡(211.75坪)',
+        750 => '750㎡(226.87坪)',
+        800 => '800㎡(242坪)',
+        850 => '850㎡(257.12坪)',
+        900 => '900㎡(272.25坪)',
+        950 => '950㎡(287.37坪)',
+        1000 => '1000㎡(302.5坪)'
     ];
 
     public static $shuekiBukken = [
@@ -803,7 +806,7 @@ class MstBkSearch {
     public static $kaiinBukken = [
         1 => '会員物件'
     ];
-     /**
+    /**
      * 検索フォーム表示（距離）
      *
      * @var array
@@ -817,7 +820,7 @@ class MstBkSearch {
         2500 => '2500',
         3000 => '3000'
     ];
-     /**
+    /**
      * 検索フォーム表示（徒歩時間）
      *
      * @var array
@@ -1138,6 +1141,10 @@ class MstBkSearch {
                         'name' => 'setubi_options',
                         'text' => '冷蔵庫あり',
                     ],
+                    '78_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'カウンターキッチン',
+                    ],
                 ],
             ],
             [
@@ -1237,6 +1244,22 @@ class MstBkSearch {
                         'name' => 'setubi_options',
                         'text' => '室内洗濯機置場',
                     ],
+                    '72_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '家具・家電付',
+                    ],
+                    '80_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '家具付',
+                    ],
+                    '81_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '家電付',
+                    ],
+                    '77_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'シューズボックス',
+                    ],
                 ],
             ],
             [
@@ -1315,6 +1338,30 @@ class MstBkSearch {
                         'name' => 'jyoken_options',
                         'text' => '分譲賃貸',
                     ],
+                    '31_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => 'LGBTフレンドリー',
+                    ],
+                    '34_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => '猫可',
+                    ],
+                    '34_02' => [
+                        'name' => 'jyoken_options',
+                        'text' => '猫相談可',
+                    ],
+                    '36_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => '小型犬可',
+                    ],
+                    '36_02' => [
+                        'name' => 'jyoken_options',
+                        'text' => '小型犬相談可',
+                    ],
+                    '35_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => '大型犬可',
+                    ],
                 ],
             ],
             [
@@ -1327,6 +1374,14 @@ class MstBkSearch {
                     '39_01' => [
                         'name' => 'setubi_options',
                         'text' => 'TVドアホン',
+                    ],
+                    '75_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '防犯カメラ',
+                    ],
+                    '76_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'セキュリティ会社加入済',
                     ],
                 ],
             ],
@@ -1377,6 +1432,14 @@ class MstBkSearch {
                         'name' => 'setubi_options',
                         'text' => '給湯',
                     ],
+                    '73_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '防音設備',
+                    ],
+                    '74_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '敷地内ゴミ置き場有り',
+                    ],
                 ],
             ],
             [
@@ -1426,6 +1489,42 @@ class MstBkSearch {
                     '41_01' => [
                         'name' => 'setubi_options',
                         'text' => '住宅性能保証付',
+                    ],
+                    '69_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'インターネット使用料不要',
+                    ],
+                    '70_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '初期費用クレジット決済可',
+                    ],
+                    '71_01' => [
+                        'name' => 'setubi_options',
+                        'text' => '賃料クレジット決済可',
+                    ],
+                    '79_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'メゾネット',
+                    ],
+                    '82_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'オンライン内見',
+                    ],
+                    '83_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'オンライン相談',
+                    ],
+                    '84_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'IT重説対応物件',
+                    ],
+                    '32_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => '24時間ゴミ出し可',
+                    ],
+                    '33_01' => [
+                        'name' => 'jyoken_options',
+                        'text' => 'DIY可',
                     ],
                 ],
             ],
@@ -1735,9 +1834,12 @@ class MstBkSearch {
                         'name' => 'setubi_options',
                         'text' => 'リフォーム',
                     ],
+                    '69_01' => [
+                        'name' => 'setubi_options',
+                        'text' => 'インターネット使用料不要',
+                    ],
                 ],
             ],
         ],
     ];
-
 }

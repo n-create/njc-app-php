@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
  */
@@ -16,7 +17,7 @@ class HelperServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        foreach (glob(ROOT . '/app/Services/Helper/*.php') as $filename){
+        foreach (glob(__DIR__ . ".." . '/app/Services/Helper/*.php') as $filename) {
             require_once($filename);
         }
     }

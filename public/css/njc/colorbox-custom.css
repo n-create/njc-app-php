@@ -2,7 +2,6 @@
 /**
  * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
  */
-/* line 4, resources/assets/sass/njc/colorbox-custom.scss */
 #cboxTitle {
   color: #333;
   font-size: 14px;
@@ -13,12 +12,10 @@
   text-align: left;
 }
 
-/* line 13, resources/assets/sass/njc/colorbox-custom.scss */
 #cboxClose {
   transition: all 0s ease;
 }
 
-/* line 16, resources/assets/sass/njc/colorbox-custom.scss */
 #cboxPrevious,
 #cboxNext {
   outline: none;
