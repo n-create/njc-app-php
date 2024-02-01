@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./resources/assets/ts",
+    "typeRoots": ["types", "node_modules/@types"]
+  }
+}

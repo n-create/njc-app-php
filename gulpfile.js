@@ -4,7 +4,7 @@ const rename = require("gulp-rename");
 const typescript = require("gulp-typescript");
 const watch = require("gulp-watch");
 const changed = require("gulp-changed");
-const compass = require("gulp-sass");
+const compass = require("gulp-sass")(require("sass"));
 
 gulp.task("jade", () => {
   gulp
@@ -48,23 +48,21 @@ gulp.task("compass", () => {
 });
 
 gulp.task("watch", () => {
-  gulp.watch(["resources/assets/jade/**/*.jade"], gulp.series("jade"), (e) => {
-    console.log(e.path);
-  });
+  gulp
+    .watch(["resources/assets/jade/**/*.jade"], gulp.task("jade"))
+    .on("change", (e) => {
+      console.log(e.path);
+    });
   gulp.watch(
     ["resources/assets/ts/**/*.ts", "typings/**/**.ts"],
-    gulp.series("typescript"),
+    gulp.task("typescript"),
     (e) => {
       console.log(e.path);
     }
   );
-  gulp.watch(
-    ["resources/assets/sass/**/*.scss"],
-    gulp.series("compass"),
-    (e) => {
-      console.log(e.path);
-    }
-  );
+  gulp.watch(["resources/assets/sass/**/*.scss"], gulp.task("compass"), (e) => {
+    console.log(e.path);
+  });
 });
 
 gulp.task("default", gulp.parallel("jade", "typescript", "compass", "watch"));
