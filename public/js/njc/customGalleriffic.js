@@ -1,4 +1,3 @@
-/// <reference path="../../../../typings/globals/jquery/index.d.ts" />
 /**
  * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
  */
@@ -7,7 +6,7 @@ jQuery(document).ready(function ($) {
     // additional styling for hover effect on thumbs
     var onMouseOutOpacity = 0.67;
     // Initialize Advanced Galleriffic Gallery
-    var gallery = $('#thumbs').galleriffic({
+    var gallery = $("#thumbs").galleriffic({
         buildPageLink: function () { },
         delay: 5000,
         numThumbs: 15,
@@ -15,28 +14,28 @@ jQuery(document).ready(function ($) {
         enableTopPager: false,
         enableBottomPager: true,
         maxPagesToShow: 7,
-        imageContainerSel: '#slideshow',
-        controlsContainerSel: '#controls',
-        captionContainerSel: '#caption',
-        loadingContainerSel: '#loading',
+        imageContainerSel: "#slideshow",
+        controlsContainerSel: "#controls",
+        captionContainerSel: "#caption",
+        loadingContainerSel: "#loading",
         renderSSControls: false,
         renderNavControls: true,
-        playLinkText: 'Play Slideshow',
-        pauseLinkText: 'Pause Slideshow',
-        prevLinkText: '',
-        nextLinkText: '',
-        nextPageLinkText: '次へ',
-        prevPageLinkText: '前へ',
+        playLinkText: "Play Slideshow",
+        pauseLinkText: "Pause Slideshow",
+        prevLinkText: "",
+        nextLinkText: "",
+        nextPageLinkText: "次へ",
+        prevPageLinkText: "前へ",
         enableHistory: false,
         autoStart: false,
         syncTransitions: true,
         defaultTransitionDuration: 900,
         onSlideChange: function (prevIndex, nextIndex) { },
         onPageTransitionOut: function (callback) {
-            this.fadeTo('fast', 0.0, callback);
+            this.fadeTo("fast", 0.0, callback);
         },
         onPageTransitionIn: function () {
-            this.fadeTo('fast', 1.0);
+            this.fadeTo("fast", 1.0);
         }
     });
     var isTchSt = false;
@@ -44,7 +43,7 @@ jQuery(document).ready(function ($) {
     var startTime = 0;
     var endPosX = 0;
     //フリック機能を追加する
-    $('#gallery').on('touchmove', function (e) {
+    $("#gallery").on("touchmove", function (e) {
         //フリックし始めるところ。
         var pos = getTouchPosition(e);
         if (!isTchSt) {
@@ -54,7 +53,7 @@ jQuery(document).ready(function ($) {
         }
         endPosX = pos.x;
     });
-    $('#gallery').on('touchend', function (e) {
+    $("#gallery").on("touchend", function (e) {
         //フリックし終わるところ。
         var move = endPosX - startPosX;
         var endTime = new Date().getTime();
@@ -73,6 +72,6 @@ jQuery(document).ready(function ($) {
         var y = e.originalEvent.touches[0].pageY;
         x = Math.floor(x);
         y = Math.floor(y);
-        return { 'x': x, 'y': y };
+        return { x: x, y: y };
     }
 });

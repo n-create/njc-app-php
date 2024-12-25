@@ -1,7 +1,8 @@
+
 <?php
 /**
- * Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
- */
+* Copyright(c) 1997-2018 Nihon Jyoho Create Co.,Ltd.
+*/
 ?>
 <?php
   $media = !empty($detailData[$searchManager::BK_DATA_MEDIA]) ? $detailData[$searchManager::BK_DATA_MEDIA] : [];
@@ -14,9 +15,6 @@
     <?php foreach($youtube as $num => $mediaData) { ?>
     <?php
       $url = $mediaData['link'];
-      if(false === strpos($url, 'www.youtube.com')) {
-          continue;
-      }
       if(false !== strpos($url, 'http://')) {
           $url = str_replace('http://', 'https://', $url);
       }

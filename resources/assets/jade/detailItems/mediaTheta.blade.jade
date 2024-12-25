@@ -11,6 +11,13 @@
 |<?php
 |   $topTheta = $thetaLinks[0];
 |   list($panoramaURL,$url360Class)=$searchManager->getRicohInfo($topTheta['link']);
+|   if (strpos($topTheta['link'], 'biz/s') !== false || strpos($topTheta['link'], 'biz/t') !== false || strpos($topTheta['link'], 'theta360.com') !== false) { 
+|       $panoramaType = 0;
+|   } else if (strpos($topTheta['link'], 'matterport') !== false) {
+|       $panoramaType = 1;
+|   } else {
+|       $panoramaType = 2; 
+|   }
 |?>
 div.mediaKomoku.theta-parts.mb-3.col
     .h4(data-subtitle="PANORAMA") パノラマ画像
@@ -24,9 +31,16 @@ div.mediaKomoku.theta-parts.mb-3.col
                 span.control-btn.tmOpenIcon.btn.btn-dark.btn-sm 開く
         div.thetaLinkBox.pc-view
             div.thetaPlayerWrap
-                blockquote(data-width="840", data-height="450", class!="{{ $url360Class }}")
-                    a(href!="{{ $topTheta['link'] }}", target="_blank")
-                    script(async, src!= "{{ $panoramaURL }}", charset="utf-8")
+                |<?php if($panoramaType == 0) { ?>
+                blockquote(data-width="840", data-height="450", class!="<?= $url360Class; ?>")
+                    a(href!="<?= $topTheta['link'] ?>", target="_blank")
+                script(async, src!= "<?= $panoramaURL ?>", charset="utf-8")
+                |<?php } else if ($panoramaType == 1) { ?>
+                iframe(width="100%", height="450", src!="<?= $topTheta['link'] ?>", frameborder="0", allowfullscreen, allow='xr-spatial-tracking', scrolling="no") 
+                |<?php } else { ?>
+                iframe(width="100%", height="450", src!="<?= $topTheta['link'] ?>", frameborder="0", allowfullscreen, scrolling="no") 
+                |<?php } ?>
+
             div.theta-select
                |<?php foreach($thetaLinks as $key => $theta) {?>
                |<?php if($key == 0) {?>
