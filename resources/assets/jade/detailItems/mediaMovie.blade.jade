@@ -14,9 +14,6 @@ div.mediaKomoku.movie-parts.mb-3.col
         |<?php foreach($youtube as $num => $mediaData) { ?>
         |<?php
         |   $url = $mediaData['link'];
-        |   if(false === strpos($url, 'www.youtube.com')) {
-        |       continue;
-        |   }
         |   if(false !== strpos($url, 'http://')) {
         |       $url = str_replace('http://', 'https://', $url);
         |   }
